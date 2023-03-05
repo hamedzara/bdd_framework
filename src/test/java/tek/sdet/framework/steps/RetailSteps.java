@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import io.cucumber.datatable.DataTable;
@@ -72,7 +73,39 @@ public class RetailSteps extends CommonUtility {
 	
 //	Scenario 2: 
 	
+	@When("User on {string}")
+	public void userOnElectronics(String department) {
+	    List<WebElement> sideBarOption = factory.homePage().sideBarElement;
+	    for(WebElement option : sideBarOption) {
+	    	if(option.getText().equals(department)) {
+	    		click(option);
+	    		try {
+	    		logger.info(option.getText() + " is present");
+	    		} catch (StaleElementReferenceException e){
+	    			
+	    		}
+	    		
+	    		break;
+	    	}
+	    }
+	}
 	
+	
+	@Then("below options are present in department")
+	public void belowOptionsArePresentInDepartment(DataTable dataTable) {
+	    List<List<String>> expectedDepartmentOption = dataTable.asLists(String.class);
+	    List<WebElement> actualDepartmentOption = factory.homePage().sideBarElement;
+	    
+	    for (int i = 0; i < expectedDepartmentOption.get(0).size(); i++) {
+			for(WebElement dept : actualDepartmentOption) {
+				if(dept.getText().equals(expectedDepartmentOption.get(0).get(i))) {
+					Assert.assertTrue(isElementDisplayed(dept));
+					logger.info(dept.getText() + " is present");
+					
+				}
+			}
+		}
+	}
 	
 	
 	
