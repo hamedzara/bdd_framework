@@ -1,9 +1,11 @@
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/pages/RetailSignInPage.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/steps/RetailAccountSteps.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/steps/SignInSteps.java
+/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/pages/RetailOrderPage.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/pages/RetailAccountPage.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/pages/RetailHomePage.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/runner/TestRunner.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/pages/POMFactory.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/base/BaseUITest.java
 /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/steps/RetailSteps.java
+/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/src/test/java/tek/sdet/framework/steps/OrderSteps.java

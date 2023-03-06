@@ -19,12 +19,11 @@ Feature: TEK Retail Account feature
     When User click on Account option
     And User enter below information
       | previousPassword | newPassword | confirmPassword |
-      | tEk@12345      | Tek@12345   | Tek@12345       |
+      | tEk@12345        | Tek@12345   | Tek@12345       |
     And User click on Change Password button
     Then a message should be displayed ‘Password Updated Successfully’
 
   #3
-  @accountTest  
   Scenario: Verify User can add a payment method
     When User click on Account option
     And User click on Add a payment method link
@@ -35,7 +34,6 @@ Feature: TEK Retail Account feature
     Then a message should be displayed ‘Payment Method added successfully’
 
   #4
-  @accountTest
   Scenario: Verify User can edit Debit or Credit card
     When User click on Account option
     And User click on Edit option of card section
@@ -46,19 +44,19 @@ Feature: TEK Retail Account feature
     Then a message should be displayed ‘Payment Method updated Successfully’
 
   #5
-  @accountTest
   Scenario: Verify User can remove Debit or Credit card
     When User click on Account option
     And User click on remove option of card section
     Then payment details should be removed
 
   #6
+  @accountTest
   Scenario: Verify User can add an Address
     When User click on Account option
     And User click on Add address option
     And user fill new address form with below information
-      | country       | fullName | phoneNumber | streetAddress | apt | city   | state      | zipCode |
-      | United States | John Doe |  1234567890 | 9285 Trenholm | A10 | FaiFax | California |   12345 |
+      | country       | fullName | phoneNumber | streetAddress | apt | city      | state   | zipCode |
+      | United States | John Doe |  0987654321 | 9999 Trenholm | A10 | FlagStaff | Arizona |   12345 |
     And User click Add Your Address button
     Then a message should be displayed ‘Address Added Successfully’
 
