@@ -118,7 +118,7 @@ public class RetailAccountPage extends BaseSetup{
 	@FindBy(xpath="//input[@id='cityInput']")
 	public WebElement accountCityAddress;
 	
-	@FindBy(xpath="//select[@name='state'")
+	@FindBy(xpath="//select[@class='account__address-new-dropdown'][@name='state']")
 	public WebElement accountStateAddress;
 	
 	@FindBy(id="zipCodeInput")

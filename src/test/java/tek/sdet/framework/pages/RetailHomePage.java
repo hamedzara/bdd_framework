@@ -24,6 +24,12 @@ public class RetailHomePage extends BaseSetup {
 	@FindBy(id="hamburgerBtn")
 	public WebElement allIcon;
 	
+	@FindBy(xpath ="//select[@class='search__select']")
+	public WebElement allDepartmentsDropDown;
+	
+	@FindBy(xpath="//option[@class='search__select-option ']")
+	public List<WebElement> categorySelection;
+	
 	@FindBy(xpath="//a[@id='signinLink']")
 	public WebElement signInIcon;
 	
@@ -44,6 +50,21 @@ public class RetailHomePage extends BaseSetup {
 	
 	@FindBy(xpath="//div[@class='sidebar_content-item']/span")
 	public List<WebElement> sideBarElement;
+	
+	@FindBy(xpath="//span[contains(text(),'Add to Cart')]")
+	public WebElement AddCartBtnProduct;
+	
+	@FindBy(xpath = "//span[@id='cartQuantity']")
+	public WebElement cartQuantityIcon;
+	
+	@FindBy(xpath ="//p[contains(text(), 'Cart')]")
+	public WebElement cartIcon;
+	
+	@FindBy(id="proceedBtn")
+	public WebElement checkoutButton;
+	
+	@FindBy(id="addAddressBtn")
+	public WebElement addNewAddressLink;
 	
 	
 	

@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tek.sdet.framework.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.83 s <<< FAILURE! - in tek.sdet.framework.runner.TestRunner
-TEK Retail Account feature.Verify User can add an Address  Time elapsed: 23.63 s  <<< ERROR!
-java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy25.sendKeys(Unknown Source)
-	at tek.sdet.framework.utilities.CommonUtility.sendText(CommonUtility.java:55)
-	at tek.sdet.framework.steps.RetailAccountSteps.userFillNewAddressFormWithBelowInformation(RetailAccountSteps.java:204)
-	at ✽.user fill new address form with below information(classpath:features/account.feature:57)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.018 s - in tek.sdet.framework.runner.TestRunner

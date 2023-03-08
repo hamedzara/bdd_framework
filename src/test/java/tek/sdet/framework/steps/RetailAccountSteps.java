@@ -19,7 +19,7 @@ public class RetailAccountSteps extends CommonUtility{
 //	Retail Account Scenarios
 	
 	
-//	Scenario 1:
+//	Scenario 1: Passed
 	
 	@When("User click on Account option")
 	public void userClickOnAccountOption() {
@@ -55,7 +55,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 2:
+//	Scenario 2: Passed
 	
 	@When("User enter below information")
 	public void userEnterBelowInformation(DataTable dataTable) {
@@ -84,7 +84,7 @@ public class RetailAccountSteps extends CommonUtility{
 	}
 	
 	
-//	Scenario 3:
+//	Scenario 3: Passed
 	
 	
 	@When("User click on Add a payment method link")
@@ -96,10 +96,13 @@ public class RetailAccountSteps extends CommonUtility{
 	@When("User fill Debit or credit card information")
 	public void userFillDebitOrCreditCardInformation(DataTable dataTable) {
 		List<Map<String, String>> addPaymentInfo = dataTable.asMaps(String.class, String.class);
+		clearMethod(factory.accountPage().accountCardNumberField);
 		sendText(factory.accountPage().accountCardNumberField, addPaymentInfo.get(0).get("cardNumber"));
+		clearMethod(factory.accountPage().accountNameOnCardField);
 		sendText(factory.accountPage().accountNameOnCardField, addPaymentInfo.get(0).get("nameOnCard"));
 		sendText(factory.accountPage().accountExpirationMonthField, addPaymentInfo.get(0).get("expirationMonth"));
 		sendText(factory.accountPage().accountExpirationYearField, addPaymentInfo.get(0).get("expirationYear"));
+		clearMethod(factory.accountPage().accountSecurityCodeField);
 		sendText(factory.accountPage().accountSecurityCodeField, addPaymentInfo.get(0).get("securityCode"));
 		logger.info("User filled the account information");
 	}
@@ -121,7 +124,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 4:
+//	Scenario 4: Passed
 	
 	@When("User click on Edit option of card section")
 	public void userClickOnEditOptionOfCardSection() {
@@ -161,7 +164,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 5: 
+//	Scenario 5: Passed
 	
 	
 	@When("User click on remove option of card section")
@@ -179,7 +182,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 6: Failed (not null char sequence)
+//	Scenario 6: Passed
 	
 	
 	
@@ -201,11 +204,11 @@ public class RetailAccountSteps extends CommonUtility{
 
 	    click(factory.accountPage().accountAddressPhoneNumber);
 	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
-	    sendText(factory.accountPage().accountAddressPhoneNumber, addressInfoTable.get(0).get("phoneNumebr"));
+	    sendText(factory.accountPage().accountAddressPhoneNumber, addressInfoTable.get(0).get("phoneNumber"));
 
 	    click(factory.accountPage().accountStreetAddress);
 	    clearMethod(factory.accountPage().accountStreetAddress);
-	    sendText(factory.accountPage().accountStateAddress, addressInfoTable.get(0).get("streetAddress"));
+	    sendText(factory.accountPage().accountStreetAddress, addressInfoTable.get(0).get("streetAddress"));
 
 	    click(factory.accountPage().accountAptAddress);
 	    clearMethod(factory.accountPage().accountAptAddress);
@@ -216,7 +219,7 @@ public class RetailAccountSteps extends CommonUtility{
 	    sendText(factory.accountPage().accountCityAddress, addressInfoTable.get(0).get("city"));
 
 	    click(factory.accountPage().accountStateAddress);
-	    selectByValue(factory.accountPage().accountStateAddress, addressInfoTable.get(0).get("state"));
+	    sendText(factory.accountPage().accountStateAddress, addressInfoTable.get(0).get("state"));
 	    
 	    click(factory.accountPage().accountZipCodeAddress);
 	    clearMethod(factory.accountPage().accountZipCodeAddress);
@@ -241,7 +244,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 7: Failed (not null char sequence)
+//	Scenario 7: Failed (wont clear the field input)
 	
 	
 	@When("User click on edit address option")

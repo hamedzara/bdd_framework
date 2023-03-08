@@ -1,3 +1,4 @@
+  @homeTest
 Feature: This feature is used for testing UI of Retail page
 
   Background: 
@@ -7,14 +8,13 @@ Feature: This feature is used for testing UI of Retail page
     When User search for "pokemon" product
     Then The product should be displayed
 
-  #1
+  #1 Passed
   Scenario: Verify Shop by Department sidebar
     When User click on All section
     Then below options are present in Shop by Department sidebar
       | Electronics | Computers | Smart Home | Sports | Automative |
 
-  #2
-  @homeTest
+  #2 Passed
   Scenario Outline: Verify department sidebar options
     When User click on All section
     And User on '<department>'

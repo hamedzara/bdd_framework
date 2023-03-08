@@ -79,11 +79,11 @@ public class RetailSteps extends CommonUtility {
 	    for(WebElement option : sideBarOption) {
 	    	if(option.getText().equals(department)) {
 	    		click(option);
-	    		try {
-	    		logger.info(option.getText() + " is present");
-	    		} catch (StaleElementReferenceException e){
-	    			
-	    		}
+//	    		try {
+//	    		logger.info(option.getText() + " is present");
+//	    		} catch (StaleElementReferenceException e){
+//	    			
+//	    		}
 	    		
 	    		break;
 	    	}
