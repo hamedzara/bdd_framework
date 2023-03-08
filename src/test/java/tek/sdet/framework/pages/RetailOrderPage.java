@@ -62,5 +62,30 @@ public class RetailOrderPage extends BaseSetup {
 	
 	@FindBy(xpath="//div[contains(text(),'Order Placed Successfully')]")
 	public WebElement orderPlacedMsg;
+	
+	@FindBy(id="orderLink")
+	public WebElement ordersSectionBtn;
+	
+	@FindBy(xpath = "//div[@class='order']")
+	public List <WebElement> orderList;
+	
+	@FindBy(xpath="//button[@id='cancelBtn']")
+	public WebElement orderCancelBtn;
+	
+	@FindBy(xpath = "//select[@id='reasonInput']")
+	public WebElement orderCancelReason;
+	
+	@FindBy(id="orderSubmitBtn")
+	public WebElement orderCancelAffirmation;
+	
+	@FindBy(xpath = "//p[contains(text(),'Your Order Has Been Cancelled')]")
+	public WebElement orderCancelationMsg;
+	
+	@FindBy(xpath ="//p[contains(text(),'Cancelled')]")
+	public WebElement orderCancelationText;
+	
+	
+	
+	
 
 }

@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 
-public class SignInSteps extends CommonUtility{
+public class RetailSignInSteps extends CommonUtility{
 	
 	POMFactory factory = new POMFactory();
 	

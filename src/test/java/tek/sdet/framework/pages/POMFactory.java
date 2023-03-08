@@ -15,6 +15,7 @@ public class POMFactory extends BaseSetup {
 	private RetailAccountPage accountPage;
 	private RetailOrderPage orderPage;
 	
+	
 //	Initializing the elements in the constructors
 //	default constructor
 	public POMFactory(){
@@ -22,6 +23,7 @@ public class POMFactory extends BaseSetup {
 		this.signInPage = new RetailSignInPage();
 		this.accountPage = new RetailAccountPage();
 		this.orderPage = new RetailOrderPage();
+		
 		
 	}
 	
@@ -45,5 +47,6 @@ public class POMFactory extends BaseSetup {
 	public RetailOrderPage orderPage() {
 		return this.orderPage;
 	}
+	
 
 }

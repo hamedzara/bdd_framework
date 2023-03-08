@@ -16,39 +16,39 @@ import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 import tek.sdet.framework.base.BaseSetup;
 
-public class RetailSteps extends CommonUtility {
+public class RetailHomeSteps extends CommonUtility {
 	
 	private POMFactory factory = new POMFactory();
 	
-	@Given("User is on retail website")
-	public void userIsOnRetailWebsite() {
-		String actualTitle = getTitle();
-		String expectedTitle = "React App";
-		
-		Assert.assertEquals(actualTitle, expectedTitle); // we use assert to verify our elements are similar or not.
-		Assert.assertTrue(isElementDisplayed(factory.homePage().tekSchoolLogo));
-		
-		logger.info("User is on retail website");
-		logger.info("Actual Title: " + actualTitle + " = Expected Title: " + expectedTitle);
-		
-	}
-	
-	@When("User search for {string} product")
-	public void userSearchForProduct(String productValue) {
-		sendText(factory.homePage().searchBar, productValue);
-		click(factory.homePage().searchButton);
-		logger.info("User searched for Product " + productValue);
-		
-	}
-	
-	@Then("The product should be displayed")
-	public void productShouldBeDisplayed() {
-		Assert.assertTrue(isElementDisplayed(factory.homePage().pokemonProduct));
-		logger.info("The Product is displayed on home page");
-		
-		
-	}
-	
+//	@Given("User is on retail website")
+//	public void userIsOnRetailWebsite() {
+//		String actualTitle = getTitle();
+//		String expectedTitle = "React App";
+//		
+//		Assert.assertEquals(actualTitle, expectedTitle); // we use assert to verify our elements are similar or not.
+//		Assert.assertTrue(isElementDisplayed(factory.homePage().tekSchoolLogo));
+//		
+//		logger.info("User is on retail website");
+//		logger.info("Actual Title: " + actualTitle + " = Expected Title: " + expectedTitle);
+//		
+//	}
+//	
+//	@When("User search for {string} product")
+//	public void userSearchForProduct(String productValue) {
+//		sendText(factory.homePage().searchBar, productValue);
+//		click(factory.homePage().searchButton);
+//		logger.info("User searched for Product " + productValue);
+//		
+//	}
+//	
+//	@Then("The product should be displayed")
+//	public void productShouldBeDisplayed() {
+//		Assert.assertTrue(isElementDisplayed(factory.homePage().pokemonProduct));
+//		logger.info("The Product is displayed on home page");
+//		
+//		
+//	}
+//	
 	
 //	Scenario 1: Passed
 	

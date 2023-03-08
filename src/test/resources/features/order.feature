@@ -17,7 +17,7 @@ Feature: Tek Retail Order feature
     And User click add to Cart button
     Then the cart icon quantity should change to '2'
 
-  #@orderTest
+  #2
   Scenario: Verify User can place an order without Shipping address and payment Method on file
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
@@ -40,8 +40,7 @@ Feature: Tek Retail Order feature
     And User click on Add your card button
     And User click on Place Your Order
     Then a message should be displayed 'Order Placed, Thanks'
-    
-@orderTest
+
   Scenario: Verify User can place an order with Shipping address and payment Method on file
     And User change the category to 'Electronics'
     And User search for an item 'Apex Legends'
@@ -54,3 +53,12 @@ Feature: Tek Retail Order feature
     And User click on Proceed to Checkout button
     And User click on Place Your Order
     Then a message should be displayed 'Order Placed, Thanks'
+
+  @orderTest
+  Scenario: Verify User can cancel the order
+    And User click on Orders section
+    And User click on first order in list
+    And User click on Cancel The Order button
+    And User select the cancelation Reason 'Bought wrong item'
+    And User click on Cancel Order button
+    Then a cancelation message should be displayed ‘Your Order Has Been Cancelled’

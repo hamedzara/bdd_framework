@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
 
-public class OrderSteps extends CommonUtility {
+public class RetailOrderSteps extends CommonUtility {
 	 
 	POMFactory factory = new POMFactory();
 	
@@ -143,13 +143,60 @@ public class OrderSteps extends CommonUtility {
 	
 //	Scenario 3: 
 	
-
+	
+	
 	
 	@Then("a message should be displayed {string}")
 	public void aMessageShouldBeDisplayed(String orderPlacement) {
 		waitTillPresence(factory.orderPage().orderPlacedMsg);
 	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderPlacedMsg));
 	    logger.info("User " + orderPlacement);
+	}
+	
+	
+//	Scenario 4:
+	
+	
+	@When("User click on Orders section")
+	public void userClickOnOrdersSection() {
+	    click(factory.orderPage().ordersSectionBtn);
+	    logger.info("User Clicked on orders section");
+	}
+	
+	@When("User click on first order in list")
+	public void userClickOnFirstOrderInList() {
+		WebElement alreadyCanceled = factory.orderPage().orderCancelationText;
+	    List<WebElement> orderlist = factory.orderPage().orderList;
+	    for(WebElement order : orderlist) {
+	    	
+	    	logger.info("User clicked on order: " + order);
+	    	if(alreadyCanceled.equals(true)) {
+	    		continue;
+	    	} 
+	    	break;
+	    
+	    }
+	}
+	
+	@When("User click on Cancel The Order button")
+	public void userClickOnCancelTheOrderButton() {
+	    click(factory.orderPage().orderCancelBtn);
+	    logger.info("User clicked on Cancel order button");
+	}
+	
+	@When("User select the cancelation Reason {string}")
+	public void userSelectTheCancelationReason(String cancelationReason) {
+	    selectByVisibleText(factory.orderPage().orderCancelReason, cancelationReason);
+	}
+	
+	@When("User click on Cancel Order button")
+	public void userClickOnCancelOrderButton() {
+	    click(factory.orderPage().orderCancelAffirmation);
+	}
+	
+	@Then("a cancelation message should be displayed ‘Your Order Has Been Cancelled’")
+	public void aCancelationMessageShouldBeDisplayedYourOrderHasBeenCancelled() {
+	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderCancelationMsg));
 	}
 	
 	
