@@ -1312,3 +1312,19 @@
 2023-03-07 20:43:15,795 - logger_File -INFO - User is on retail website
 2023-03-07 20:43:15,796 - logger_File -INFO - Actual Title: React App = Expected Title: React App
 2023-03-07 20:43:16,125 - logger_File -INFO - User clicked on All section
+2023-03-07 21:13:40,605 - logger_File -INFO - User is on retail website
+2023-03-07 21:13:40,610 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-07 21:13:41,069 - logger_File -INFO - User clicked on signin button
+2023-03-07 21:13:46,519 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-07 21:13:47,663 - logger_File -INFO - User clicked on login button
+2023-03-07 21:13:49,404 - logger_File -INFO - User changed the category to: Electronics
+2023-03-07 21:13:49,931 - logger_File -INFO - User searched for the item: Apex Legends
+2023-03-07 21:13:50,098 - logger_File -INFO - User clicked on search button
+2023-03-07 21:21:57,616 - logger_File -INFO - User is on retail website
+2023-03-07 21:21:57,621 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-07 21:21:58,244 - logger_File -INFO - User clicked on signin button
+2023-03-07 21:22:03,349 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-07 21:22:04,422 - logger_File -INFO - User clicked on login button
+2023-03-07 21:22:06,032 - logger_File -INFO - User changed the category to: Electronics
+2023-03-07 21:22:06,648 - logger_File -INFO - User searched for the item: Apex Legends
+2023-03-07 21:22:06,799 - logger_File -INFO - User clicked on search button

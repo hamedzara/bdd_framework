@@ -141,5 +141,18 @@ public class OrderSteps extends CommonUtility {
 	
 	
 	
+//	Scenario 3: 
+	
+
+	
+	@Then("a message should be displayed {string}")
+	public void aMessageShouldBeDisplayed(String orderPlacement) {
+		waitTillPresence(factory.orderPage().orderPlacedMsg);
+	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderPlacedMsg));
+	    logger.info("User " + orderPlacement);
+	}
+	
+	
+	
 
 }

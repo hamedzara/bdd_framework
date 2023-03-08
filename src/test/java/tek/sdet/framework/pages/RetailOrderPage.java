@@ -2,6 +2,7 @@ package tek.sdet.framework.pages;
 
 import java.util.List;
 
+import org.apache.commons.collections4.Get;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,8 +17,12 @@ public class RetailOrderPage extends BaseSetup {
 	}
 	
 	
+	
 	@FindBy(xpath="//p[contains(text(),'Kasa Outdoor Smart Plug')]")
 	public WebElement productOrderValue;
+	
+	@FindBy(xpath="//p[contains(text(),'Apex Legends - 1,000 Apex Coins')]")
+	public WebElement productValue2;
 	
 	@FindBy(xpath="//select[@class='product__select']")
 	public WebElement productQuantityValue;

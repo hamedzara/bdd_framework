@@ -7,6 +7,7 @@ Feature: Tek Retail Order feature
     And User click on login button
     And User should be logged in into Account
 
+  #1 Passed
   Scenario: Verify User can add an item to cart
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
@@ -16,7 +17,7 @@ Feature: Tek Retail Order feature
     And User click add to Cart button
     Then the cart icon quantity should change to '2'
 
-  @orderTest
+  #@orderTest
   Scenario: Verify User can place an order without Shipping address and payment Method on file
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
@@ -38,4 +39,18 @@ Feature: Tek Retail Order feature
       | 0009876543210009 | John       |               6 |           2032 |          222 |
     And User click on Add your card button
     And User click on Place Your Order
-    Then a message should be displayed ‘Order Placed, Thanks’
+    Then a message should be displayed 'Order Placed, Thanks'
+    
+@orderTest
+  Scenario: Verify User can place an order with Shipping address and payment Method on file
+    And User change the category to 'Electronics'
+    And User search for an item 'Apex Legends'
+    And User click on Search icon
+    And User click on item
+    And User select quantity '5'
+    And User click add to Cart button
+    Then the cart icon quantity should change to '5'
+    And User click on Cart option
+    And User click on Proceed to Checkout button
+    And User click on Place Your Order
+    Then a message should be displayed 'Order Placed, Thanks'
