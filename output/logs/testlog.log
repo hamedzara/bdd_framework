@@ -1686,3 +1686,94 @@
 2023-03-08 19:12:49,470 - logger_File -INFO - User clicked on address edit button
 2023-03-08 19:12:53,577 - logger_File -INFO - User filled the address info
 2023-03-08 19:12:53,763 - logger_File -INFO - User clicked on update button
+2023-03-08 20:22:59,012 - logger_File -INFO - User is on retail website
+2023-03-08 20:22:59,033 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:22:59,631 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:23:05,543 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:23:05,658 - logger_File -INFO - User clicked on login button
+2023-03-08 20:23:07,295 - logger_File -INFO - User changed the category to: Electronics
+2023-03-08 20:23:07,899 - logger_File -INFO - User searched for the item: Apex Legends
+2023-03-08 20:23:08,132 - logger_File -INFO - User clicked on search button
+2023-03-08 20:23:08,555 - logger_File -INFO - User Clicked on the item
+2023-03-08 20:23:09,325 - logger_File -INFO - User clicked add to Cart button
+2023-03-08 20:23:09,592 - logger_File -INFO - User cart icon quantity changed to: 5
+2023-03-08 20:23:09,853 - logger_File -INFO - User clicked on cart Icon
+2023-03-08 20:23:10,059 - logger_File -INFO - User clicked on checkout button
+2023-03-08 20:23:10,349 - logger_File -INFO - User clicked on place order button
+2023-03-08 20:23:11,627 - logger_File -INFO - User Order Placed, Thanks
+2023-03-08 20:23:19,554 - logger_File -INFO - User is on retail website
+2023-03-08 20:23:19,555 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:23:20,148 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:23:26,082 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:23:26,169 - logger_File -INFO - User clicked on login button
+2023-03-08 20:23:26,983 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:23:28,289 - logger_File -INFO - User clicked on Cancel order button
+2023-03-08 20:23:28,808 - logger_File -INFO - User Cancelation message:Your Order Has Been Cancelled
+2023-03-08 20:24:19,993 - logger_File -INFO - User is on retail website
+2023-03-08 20:24:20,010 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:24:20,848 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:24:26,531 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:24:26,629 - logger_File -INFO - User clicked on login button
+2023-03-08 20:24:27,409 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:24:35,237 - logger_File -INFO - User clicked on Cancel order button
+2023-03-08 20:24:35,765 - logger_File -INFO - User Cancelation message:Your Order Has Been Cancelled
+2023-03-08 20:26:19,365 - logger_File -INFO - User is on retail website
+2023-03-08 20:26:19,385 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:26:20,006 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:26:23,031 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:26:23,566 - logger_File -INFO - User clicked on login button
+2023-03-08 20:26:27,298 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:26:27,867 - logger_File -INFO - User clicked on Cancel order button
+2023-03-08 20:26:28,466 - logger_File -INFO - User Cancelation message:Your Order Has Been Cancelled
+2023-03-08 20:26:52,231 - logger_File -INFO - User is on retail website
+2023-03-08 20:26:52,279 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:26:52,850 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:26:55,328 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:26:56,421 - logger_File -INFO - User clicked on login button
+2023-03-08 20:26:59,148 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:32:23,841 - logger_File -INFO - User is on retail website
+2023-03-08 20:32:23,858 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:32:24,499 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:32:30,884 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:32:30,979 - logger_File -INFO - User clicked on login button
+2023-03-08 20:32:31,819 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:47:27,441 - logger_File -INFO - User is on retail website
+2023-03-08 20:47:27,460 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:47:27,999 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:47:31,366 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:47:32,027 - logger_File -INFO - User clicked on login button
+2023-03-08 20:47:35,117 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:50:02,268 - logger_File -INFO - User is on retail website
+2023-03-08 20:50:02,289 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:50:02,902 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:50:07,545 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:50:08,325 - logger_File -INFO - User clicked on login button
+2023-03-08 20:50:09,419 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:51:26,152 - logger_File -INFO - User is on retail website
+2023-03-08 20:51:26,173 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:51:26,826 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:51:32,697 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:51:32,783 - logger_File -INFO - User clicked on login button
+2023-03-08 20:51:33,558 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:52:42,195 - logger_File -INFO - User is on retail website
+2023-03-08 20:52:42,213 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:52:42,862 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:52:47,854 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:52:49,243 - logger_File -INFO - User clicked on login button
+2023-03-08 20:52:50,109 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:53:54,191 - logger_File -INFO - User is on retail website
+2023-03-08 20:53:54,212 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:53:54,909 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:53:58,225 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:53:58,802 - logger_File -INFO - User clicked on login button
+2023-03-08 20:54:02,184 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:54:03,911 - logger_File -INFO - User clicked on Cancel order button
+2023-03-08 20:54:04,470 - logger_File -INFO - User Cancelation message:Your Order Has Been Cancelled
+2023-03-08 20:55:31,256 - logger_File -INFO - User is on retail website
+2023-03-08 20:55:31,272 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-08 20:55:31,958 - logger_File -INFO - User clicked on signin button
+2023-03-08 20:55:37,862 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 20:55:37,950 - logger_File -INFO - User clicked on login button
+2023-03-08 20:55:38,826 - logger_File -INFO - User Clicked on orders section
+2023-03-08 20:55:41,440 - logger_File -INFO - User clicked on Cancel order button
+2023-03-08 20:55:42,073 - logger_File -INFO - User Cancelation message:Your Order Has Been Cancelled

@@ -42,7 +42,6 @@ Feature: Tek Retail Order feature
     Then a message should be displayed 'Order Placed, Thanks'
 
   #3 Passed
-  @orderTest
   Scenario: Verify User can place an order with Shipping address and payment Method on file
     And User change the category to 'Electronics'
     And User search for an item 'Apex Legends'
@@ -57,7 +56,7 @@ Feature: Tek Retail Order feature
     Then a message should be displayed 'Order Placed, Thanks'
 
   #4 Passed
-    @orderTest
+  @orderTest
   Scenario: Verify User can cancel the order
     And User click on Orders section
     And User click on first order in list

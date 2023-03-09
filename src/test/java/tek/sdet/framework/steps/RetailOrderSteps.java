@@ -159,7 +159,7 @@ public class RetailOrderSteps extends CommonUtility {
 	}
 	
 	
-//	Scenario 4: Passed/ but if we run it as a single scenario, needs work with going through list of orders and canceling the order.
+//	Scenario 4: Passed
 	
 	
 	@When("User click on Orders section")
@@ -168,19 +168,17 @@ public class RetailOrderSteps extends CommonUtility {
 	    logger.info("User Clicked on orders section");
 	}
 	
+	
 	@When("User click on first order in list")
 	public void userClickOnFirstOrderInList() {
+		boolean temp = false;
 		WebElement alreadyCanceled = factory.orderPage().orderCancelationText;
-	    List<WebElement> orderlist = factory.orderPage().showOrderList;
+	    List<WebElement> orderlist = factory.orderPage().showDetailList;
 	    for(WebElement order : orderlist) {
-	    	if(order.equals(true)) {
-//	    		click(order);
-	    		break;
-	    	} else {
-	    	continue;
-	    	}
-	    
+	    	
+	    		click(order);
 	    }
+	    
 	}
 	
 	@When("User click on Cancel The Order button")
