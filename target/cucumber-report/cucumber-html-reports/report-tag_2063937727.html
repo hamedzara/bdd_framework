@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>08 Mar 2023, 16:07</td>
+      <td>08 Mar 2023, 21:29</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@orderTest</td>
-          <td      class="passed"    >15</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >1</td>
+          <td      class="passed"    >6</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">17</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">6</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="10091435000">10.091</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="5011648000">5.011</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -183,14 +183,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.091</span>
+  <span class="lead-duration duration">5.011</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify User can place an order without Shipping address and payment Method on file</span>
+  <span class="name">Verify User can cancel the order</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -199,7 +199,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -221,7 +221,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">tek.sdet.framework.base.BaseUITest.setupTests()</span>
 
-  <span class="lead-duration duration">10.727</span>
+  <span class="lead-duration duration">10.768</span>
 
           </div>
 
@@ -238,9 +238,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -250,15 +250,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User change the category to <span class="argument">'Smart Home'</span></span>
+  <span class="name">User click on Orders section</span>
 
-  <span class="lead-duration duration">0.992</span>
+  <span class="lead-duration duration">2.337</span>
 
 </div>
 
@@ -283,36 +283,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User search for an item <span class="argument">'kasa outdoor smart plug'</span></span>
+  <span class="name">User click on first order in list</span>
 
-  <span class="lead-duration duration">0.756</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click on Search icon</span>
-
-  <span class="lead-duration duration">0.212</span>
+  <span class="lead-duration duration">1.552</span>
 
 </div>
 
@@ -337,36 +310,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User click on item</span>
+  <span class="name">User click on Cancel The Order button</span>
 
-  <span class="lead-duration duration">0.319</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User select quantity <span class="argument">'2'</span></span>
-
-  <span class="lead-duration duration">0.619</span>
+  <span class="lead-duration duration">0.402</span>
 
 </div>
 
@@ -391,9 +337,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User click add to Cart button</span>
+  <span class="name">User select the cancelation Reason <span class="argument">'Bought wrong item'</span></span>
 
-  <span class="lead-duration duration">0.110</span>
+  <span class="lead-duration duration">0.145</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User click on Cancel Order button</span>
+
+  <span class="lead-duration duration">0.235</span>
 
 </div>
 
@@ -418,358 +391,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">the cart icon quantity should change to <span class="argument">'2'</span></span>
+  <span class="name">a cancelation message should be displayed <span class="argument">'Your Order Has Been Cancelled'</span></span>
 
-  <span class="lead-duration duration">0.301</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click on Cart option</span>
-
-  <span class="lead-duration duration">0.349</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click on Proceed to Checkout button</span>
-
-  <span class="lead-duration duration">0.183</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click Add a new address link for shipping address</span>
-
-  <span class="lead-duration duration">0.483</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User fill new address form with below information</span>
-
-  <span class="lead-duration duration">2.757</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>country</td>
-                  <td>fullName</td>
-                  <td>phoneNumber</td>
-                  <td>streetAddress</td>
-                  <td>apt</td>
-                  <td>city</td>
-                  <td>state</td>
-                  <td>zipCode</td>
-              </tr>
-              <tr>
-                  <td>France</td>
-                  <td>John</td>
-                  <td>1234567890</td>
-                  <td>Governor St</td>
-                  <td>111</td>
-                  <td>Phoenix</td>
-                  <td>Bretagne</td>
-                  <td>12345</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click Add Your Address button</span>
-
-  <span class="lead-duration duration">0.200</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click Add a credit card or Debit Card for Payment method</span>
-
-  <span class="lead-duration duration">0.448</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User fill Debit or credit card information</span>
-
-  <span class="lead-duration duration">0.893</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>cardNumber</td>
-                  <td>nameOnCard</td>
-                  <td>expirationMonth</td>
-                  <td>expirationYear</td>
-                  <td>securityCode</td>
-              </tr>
-              <tr>
-                  <td>0009876543210009</td>
-                  <td>John</td>
-                  <td>6</td>
-                  <td>2032</td>
-                  <td>222</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click on Add your card button</span>
-
-  <span class="lead-duration duration">0.238</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And failed">
-  <span class="keyword indention">And</span>
-  <span class="name">User click on Place Your Order</span>
-
-  <span class="lead-duration duration">1.223</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.openqa.selenium.ElementClickInterceptedException:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;checkout__order-btn&quot; id=&quot;placeOrderBtn&quot;&gt;...&lt;/button&gt; is not clickable at point (1164, 16). Other element would receive the click: &lt;div class=&quot;modal&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=110.0.5481.177)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'Hameds-Air.attlocal.net', ip: '2600:1700:402:480:f85a:1fa8:f2ff:343d%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.15.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3dcf4e1522b7e9e8471fc48c83f690bf, clickElement {id=21dc7027-846e-4bb3-b633-beff31b3175e}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/g2/s96v8q9s1pg...}, goog:chromeOptions: {debuggerAddress: localhost:51548}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51548/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on MAC (3dcf4e1522b7e9e8471fc48c83f690bf)] -&gt; id: placeOrderBtn]
-Session ID: 3dcf4e1522b7e9e8471fc48c83f690bf
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at jdk.internal.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy25.click(Unknown Source)
-	at tek.sdet.framework.utilities.CommonUtility.click(CommonUtility.java:47)
-	at tek.sdet.framework.steps.RetailOrderSteps.userClickOnPlaceYourOrder(RetailOrderSteps.java:131)
-	at &#10045;.User click on Place Your Order(classpath:features/order.feature:42)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">a message should be displayed <span class="argument">'Order Placed, Thanks'</span></span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.338</span>
 
 </div>
 
@@ -796,7 +420,7 @@ Session ID: 3dcf4e1522b7e9e8471fc48c83f690bf
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -808,13 +432,13 @@ Session ID: 3dcf4e1522b7e9e8471fc48c83f690bf
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details ">
+    <div id="after-4" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">tek.sdet.framework.base.BaseUITest.closeTests(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.815</span>
+  <span class="lead-duration duration">0.125</span>
 
           </div>
 
@@ -823,19 +447,6 @@ Session ID: 3dcf4e1522b7e9e8471fc48c83f690bf
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>Verify User can place an order without Shipping address and payment Method on file scenario Failed</a>
-      <a href="embeddings/embedding_-1674925940.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-6" class="collapse collapsable-details ">
-        <pre class="embedding-content">This file cannot be displayed. Use download button to get the content as file.</pre>
-    </div>
-  </div>
-  </div>
 
         </div>
     </div>

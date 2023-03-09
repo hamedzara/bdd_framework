@@ -1777,3 +1777,25 @@
 2023-03-08 20:55:38,826 [main] INFO logger_File - User Clicked on orders section
 2023-03-08 20:55:41,440 [main] INFO logger_File - User clicked on Cancel order button
 2023-03-08 20:55:42,073 [main] INFO logger_File - User Cancelation message:Your Order Has Been Cancelled
+2023-03-08 21:24:49,354 [main] INFO logger_File - User is on retail website
+2023-03-08 21:24:49,370 [main] INFO logger_File - Actual Title: React App = Expected Title: React App
+2023-03-08 21:24:49,977 [main] INFO logger_File - User clicked on signin button
+2023-03-08 21:24:52,589 [main] INFO logger_File - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 21:24:53,072 [main] INFO logger_File - User clicked on login button
+2023-03-08 21:24:57,138 [main] INFO logger_File - User Clicked on account button
+2023-03-08 21:24:57,785 [main] INFO logger_File - User clicked on address edit button
+2023-03-08 21:25:02,013 [main] INFO logger_File - User filled the address info
+2023-03-08 21:25:02,195 [main] INFO logger_File - User clicked on update button
+2023-03-08 21:28:54,061 [main] INFO logger_File - User is on retail website
+2023-03-08 21:28:54,077 [main] INFO logger_File - Actual Title: React App = Expected Title: React App
+2023-03-08 21:28:54,714 [main] INFO logger_File - User clicked on signin button
+2023-03-08 21:28:57,051 [main] INFO logger_File - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-08 21:28:57,279 [main] INFO logger_File - User clicked on login button
+2023-03-08 21:29:01,822 [main] INFO logger_File - User Clicked on orders section
+2023-03-08 21:29:03,779 [main] INFO logger_File - User clicked on Cancel order button
+2023-03-08 21:29:04,501 [main] INFO logger_File - User Cancelation message:Your Order Has Been Cancelled
+2023-03-09 00:04:21,804 [main] INFO logger_File - User is on retail website
+2023-03-09 00:04:21,847 [main] INFO logger_File - Actual Title: React App = Expected Title: React App
+2023-03-09 00:04:22,471 [main] INFO logger_File - User clicked on signin button
+2023-03-09 00:04:28,217 [main] INFO logger_File - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-09 00:04:28,311 [main] INFO logger_File - User clicked on login button

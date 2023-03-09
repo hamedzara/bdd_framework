@@ -19,6 +19,9 @@ public class RetailAccountPage extends BaseSetup{
 	@FindBy(xpath = "//img[@id='profileImage']")
 	public WebElement profileImage;
 	
+	@FindBy(xpath="//h1[contains(text(),'Your Profile')]")
+	public WebElement yourProfileText;
+	
 	@FindBy(css = "#nameInput")
 	public WebElement accountNameField;
 	

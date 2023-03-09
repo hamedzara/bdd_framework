@@ -25,6 +25,8 @@ public class RetailSignInSteps extends CommonUtility{
 //	or it will give you duplicate error when you run your test
 	
 	
+//	Scenario 1: Passed
+	
 	@When("User click on Sign in option")
 	public void userClickOnSignInOption() {
 		
@@ -32,7 +34,7 @@ public class RetailSignInSteps extends CommonUtility{
 		logger.info("User clicked on signin button");
 	}
 	
-	@When("User enter email {string} and password {string}")
+	@And("User enter email {string} and password {string}")
 	public void userEnterEmailAndPassword(String emailValue, String passwordValue) {
 		click(factory.signInPage().emailField);
 		sendText(factory.signInPage().emailField, emailValue);
@@ -43,7 +45,7 @@ public class RetailSignInSteps extends CommonUtility{
 		
 	}
 	
-	@When("User click on login button")
+	@And("User click on login button")
 	public void userClickOnLoginButton() {
 		click(factory.signInPage().logInBtn);
 		logger.info("User clicked on login button");
@@ -54,6 +56,7 @@ public class RetailSignInSteps extends CommonUtility{
 	@Then("User should be logged in into Account")
 	public void userShouldBeLoggedInIntoAccount() {
 		Assert.assertTrue(isElementDisplayed(factory.signInPage().accountBtn));
+		logger.info("User is logged into account");
 		
 	    
 	}
@@ -61,7 +64,7 @@ public class RetailSignInSteps extends CommonUtility{
 	
 	
 	
-	
+//	Scenario 2: Passed
 //	SignUp Scenario/Using Scenario outline(set of Data)
 	
 	@When("User click on Create new Account button")
@@ -82,6 +85,9 @@ public class RetailSignInSteps extends CommonUtility{
 		
 	}
 	
+	
+//	Scenario 3: Passed
+	
 	@When("User click on signUp button")
 	public void userClickOnSignUpButton() {
 		click(factory.signInPage().signUpFormBtn);
@@ -91,7 +97,7 @@ public class RetailSignInSteps extends CommonUtility{
 	
 	@Then("User should be logged into account page")
 	public void userShouldBeLoggedIntoAccountPage() {
-		isElementDisplayed(factory.signInPage().accountBtn);
+		Assert.assertTrue(isElementDisplayed(factory.accountPage().yourProfileText));
 		Assert.assertTrue(isElementDisplayed(factory.accountPage().profileImage));
 		logger.info("User is logged into Account page");
 		

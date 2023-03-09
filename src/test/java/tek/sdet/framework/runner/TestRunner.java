@@ -8,10 +8,10 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "@orderTest",
+        tags = "@signinTest",
         features = ("classpath:features"),
         glue = "tek.sdet.framework",
-        dryRun = false,
+        dryRun = true,
         plugin = {
                 "pretty",
                 "html:target/htmlReports/cucumber-pretty.html",

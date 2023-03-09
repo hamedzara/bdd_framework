@@ -1,4 +1,3 @@
-@signinTest
 Feature: TEK Retail application SignIn feature
 
   #1 Passed
@@ -24,12 +23,13 @@ Feature: TEK Retail application SignIn feature
       | tester1010@tekschool.us     | Tek@12345 |
 
   #3 Passed
+  @signinTest
   Scenario: Verify user can create an account into Retail Website
     Given User is on retail website
     When User click on Sign in option
     And User click on Create new Account button
     And User fill the signUp information with below data
-      | name  | email                     | password  | confirmPassword |
-      | hamed | tester101010@tekschool.us | Tek@12345 | Tek@12345       |
+      | name  | email                      | password  | confirmPassword |
+      | hamed | tester1010101@tekschool.us | Tek@12345 | Tek@12345       |
     And User click on signUp button
     Then User should be logged into account page
