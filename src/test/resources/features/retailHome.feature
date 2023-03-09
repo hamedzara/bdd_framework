@@ -1,4 +1,4 @@
-  @homeTest
+@homeTest
 Feature: This feature is used for testing UI of Retail page
 
   Background: 
@@ -15,6 +15,7 @@ Feature: This feature is used for testing UI of Retail page
     Then below options are present in Shop by Department sidebar
       | Electronics | Computers | Smart Home | Sports | Automative |
 
+  #passed
   Scenario Outline: Verify department sidebar options
     When User click on All section
     And User on '<department>'

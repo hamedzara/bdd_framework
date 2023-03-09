@@ -76,7 +76,7 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	
 	
-//	Scenario 2:
+//	Scenario 2: Passed
 	
 	
 	@And("User click on Cart option")
@@ -111,8 +111,9 @@ public class RetailOrderSteps extends CommonUtility {
 	    sendText(factory.orderPage().orderAddressApt, orderNewAddressInfo.get(0).get("apt"));
 	    clearMethod(factory.orderPage().orderAddressCity);
 	    sendText(factory.orderPage().orderAddressCity, orderNewAddressInfo.get(0).get("city"));
+	    waitTillClickable(factory.orderPage().orderAddressState);
 	    click(factory.orderPage().orderAddressState);
-	    sendText(factory.orderPage().orderAddressState, orderNewAddressInfo.get(0).get("state"));
+	    selectByValue(factory.orderPage().orderAddressState, orderNewAddressInfo.get(0).get("state"));
 	    clearMethod(factory.orderPage().orderAddressZipcode);
 	    sendText(factory.orderPage().orderAddressZipcode, orderNewAddressInfo.get(0).get("zipCode"));
 	    logger.info("User filled new address from information");
@@ -141,10 +142,14 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	
 	
-//	Scenario 3: 
+//	Scenario 3: Passed
 	
 	
-	
+	@When("User click on the item")
+	public void userClickOnTheItem() {
+	    click(factory.orderPage().productValue2);
+	    logger.info("User Clicked on the item");
+	}
 	
 	@Then("a message should be displayed {string}")
 	public void aMessageShouldBeDisplayed(String orderPlacement) {
@@ -154,7 +159,7 @@ public class RetailOrderSteps extends CommonUtility {
 	}
 	
 	
-//	Scenario 4:
+//	Scenario 4: Passed/ but if we run it as a single scenario, needs work with going through list of orders and canceling the order.
 	
 	
 	@When("User click on Orders section")
@@ -166,14 +171,14 @@ public class RetailOrderSteps extends CommonUtility {
 	@When("User click on first order in list")
 	public void userClickOnFirstOrderInList() {
 		WebElement alreadyCanceled = factory.orderPage().orderCancelationText;
-	    List<WebElement> orderlist = factory.orderPage().orderList;
+	    List<WebElement> orderlist = factory.orderPage().showOrderList;
 	    for(WebElement order : orderlist) {
-	    	
-	    	logger.info("User clicked on order: " + order);
-	    	if(alreadyCanceled.equals(true)) {
-	    		continue;
-	    	} 
-	    	break;
+	    	if(order.equals(true)) {
+//	    		click(order);
+	    		break;
+	    	} else {
+	    	continue;
+	    	}
 	    
 	    }
 	}
@@ -194,9 +199,13 @@ public class RetailOrderSteps extends CommonUtility {
 	    click(factory.orderPage().orderCancelAffirmation);
 	}
 	
-	@Then("a cancelation message should be displayed ‘Your Order Has Been Cancelled’")
-	public void aCancelationMessageShouldBeDisplayedYourOrderHasBeenCancelled() {
-	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderCancelationMsg));
+	
+	@Then("a cancelation message should be displayed {string}")
+	public void aCancelationMessageShouldBeDisplayed(String cancelText) {
+		waitTillPresence(factory.orderPage().orderCancelationText);
+	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderCancelationText));
+	    logger.info("User Cancelation message:" + cancelText);
+	    
 	}
 	
 	

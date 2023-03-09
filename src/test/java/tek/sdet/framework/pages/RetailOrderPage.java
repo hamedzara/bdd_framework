@@ -45,7 +45,7 @@ public class RetailOrderPage extends BaseSetup {
 	@FindBy(xpath="//input[@id='cityInput']")
 	public WebElement orderAddressCity;
 	
-	@FindBy(xpath="//select[@class='account__address-new-dropdown'][@name='state']")
+	@FindBy(xpath = "//select[@class='account__address-new-dropdown' and @name='state']")
 	public WebElement orderAddressState;
 	
 	@FindBy(id="zipCodeInput")
@@ -68,6 +68,9 @@ public class RetailOrderPage extends BaseSetup {
 	
 	@FindBy(xpath = "//div[@class='order']")
 	public List <WebElement> orderList;
+	
+	@FindBy(xpath="//p[contains(text(),'Show Details')]")
+	public List <WebElement> showOrderList;
 	
 	@FindBy(xpath="//button[@id='cancelBtn']")
 	public WebElement orderCancelBtn;

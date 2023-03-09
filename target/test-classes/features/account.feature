@@ -64,9 +64,9 @@ Feature: TEK Retail Account feature
   Scenario: Verify User can edit an Address added on account
     When User click on Account option
     And User click on edit address option
-    And user fill new address form with below information
+    And user fill the new address form with below information
       | country | fullName | phoneNumber | streetAddress | apt | city   | state   | zipCode |
-      | Canada  | Williams |  0987654321 | king st       |  15 | Quebec | Toronto |   12345 |
+      | Canada  | Jack     |  0987654321 | king st       |  15 | Quebec | Toronto |   12345 |
     And User click update Your Address button
     Then a message should be displayed ‘Address Updated Successfully’
 

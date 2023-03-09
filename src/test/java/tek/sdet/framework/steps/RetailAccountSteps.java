@@ -194,36 +194,36 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	@And("user fill new address form with below information")
 	public void userFillNewAddressFormWithBelowInformation(DataTable dataTable) {
-	    List<Map<String, String>> addressInfoTable = dataTable.asMaps(String.class, String.class);
+	    List<Map<String, String>> newAddressTable = dataTable.asMaps(String.class, String.class);
 	    click(factory.accountPage().accountAddressCountry);
-	    selectByValue(factory.accountPage().accountAddressCountry, addressInfoTable.get(0).get("country"));
+	    selectByValue(factory.accountPage().accountAddressCountry, newAddressTable.get(0).get("country"));
 	    
 	    click(factory.accountPage().accountAddressFullName);
 	    clearMethod(factory.accountPage().accountAddressFullName);
-	    sendText(factory.accountPage().accountAddressFullName, addressInfoTable.get(0).get("fullName"));
+	    sendText(factory.accountPage().accountAddressFullName, newAddressTable.get(0).get("fullName"));
 
 	    click(factory.accountPage().accountAddressPhoneNumber);
 	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
-	    sendText(factory.accountPage().accountAddressPhoneNumber, addressInfoTable.get(0).get("phoneNumber"));
+	    sendText(factory.accountPage().accountAddressPhoneNumber, newAddressTable.get(0).get("phoneNumber"));
 
 	    click(factory.accountPage().accountStreetAddress);
 	    clearMethod(factory.accountPage().accountStreetAddress);
-	    sendText(factory.accountPage().accountStreetAddress, addressInfoTable.get(0).get("streetAddress"));
+	    sendText(factory.accountPage().accountStreetAddress, newAddressTable.get(0).get("streetAddress"));
 
 	    click(factory.accountPage().accountAptAddress);
 	    clearMethod(factory.accountPage().accountAptAddress);
-	    sendText(factory.accountPage().accountAptAddress, addressInfoTable.get(0).get("apt"));
+	    sendText(factory.accountPage().accountAptAddress, newAddressTable.get(0).get("apt"));
 
 	    click(factory.accountPage().accountCityAddress);
 	    clearMethod(factory.accountPage().accountCityAddress);
-	    sendText(factory.accountPage().accountCityAddress, addressInfoTable.get(0).get("city"));
+	    sendText(factory.accountPage().accountCityAddress, newAddressTable.get(0).get("city"));
 
 	    click(factory.accountPage().accountStateAddress);
-	    sendText(factory.accountPage().accountStateAddress, addressInfoTable.get(0).get("state"));
+	    sendText(factory.accountPage().accountStateAddress, newAddressTable.get(0).get("state"));
 	    
 	    click(factory.accountPage().accountZipCodeAddress);
 	    clearMethod(factory.accountPage().accountZipCodeAddress);
-	    sendText(factory.accountPage().accountZipCodeAddress, addressInfoTable.get(0).get("zipCode"));
+	    sendText(factory.accountPage().accountZipCodeAddress, newAddressTable.get(0).get("zipCode"));
 	    logger.info("User filled the address info");
 	    
 	}
@@ -251,6 +251,42 @@ public class RetailAccountSteps extends CommonUtility{
 	public void userClickOnEditAddressOption() {
 	    click(factory.accountPage().accountAddressEditBtn);
 	    logger.info("User clicked on address edit button");
+	}
+	
+	
+	@When("user fill the new address form with below information")
+	public void userFillTheNewAddressFormWithBelowInformation(DataTable dataTable) {
+	    List<Map<String, String>> newAddressTable = dataTable.asMaps(String.class, String.class);
+	    click(factory.accountPage().accountAddressCountry);
+	    selectByValue(factory.accountPage().accountAddressCountry, newAddressTable.get(0).get("country"));
+	    
+	    click(factory.accountPage().accountAddressFullName);
+	    clearMethod(factory.accountPage().accountAddressFullName);
+	    sendText(factory.accountPage().accountAddressFullName, newAddressTable.get(0).get("fullName"));
+
+	    click(factory.accountPage().accountAddressPhoneNumber);
+	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
+	    sendText(factory.accountPage().accountAddressPhoneNumber, newAddressTable.get(0).get("phoneNumber"));
+
+	    click(factory.accountPage().accountStreetAddress);
+	    clearMethod(factory.accountPage().accountStreetAddress);
+	    sendText(factory.accountPage().accountStreetAddress, newAddressTable.get(0).get("streetAddress"));
+
+	    click(factory.accountPage().accountAptAddress);
+	    clearMethod(factory.accountPage().accountAptAddress);
+	    sendText(factory.accountPage().accountAptAddress, newAddressTable.get(0).get("apt"));
+
+	    click(factory.accountPage().accountCityAddress);
+	    clearMethod(factory.accountPage().accountCityAddress);
+	    sendText(factory.accountPage().accountCityAddress, newAddressTable.get(0).get("city"));
+
+	    click(factory.accountPage().accountStateAddress);
+	    sendText(factory.accountPage().accountStateAddress, newAddressTable.get(0).get("state"));
+	    
+	    click(factory.accountPage().accountZipCodeAddress);
+	    clearMethod(factory.accountPage().accountZipCodeAddress);
+	    sendText(factory.accountPage().accountZipCodeAddress, newAddressTable.get(0).get("zipCode"));
+	    logger.info("User filled the address info");
 	}
 	
 	
