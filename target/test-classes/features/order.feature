@@ -8,7 +8,9 @@ Feature: Tek Retail Order feature
     And User should be logged in into Account
 
   #1 Passed
+  @orderTest
   Scenario: Verify User can add an item to cart
+  	And User clears already existing items in cart section
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
@@ -56,7 +58,6 @@ Feature: Tek Retail Order feature
     Then a message should be displayed 'Order Placed, Thanks'
 
   #4 Passed
-  @orderTest
   Scenario: Verify User can cancel the order
     And User click on Orders section
     And User click on first order in list
@@ -65,11 +66,19 @@ Feature: Tek Retail Order feature
     And User click on Cancel Order button
     Then a cancelation message should be displayed 'Your Order Has Been Cancelled'
 
+  #5 Passed
   Scenario: Verify User can Return the order
+    And User click on Return Items button
+    And User select the Return Reason 'Item damaged'
+    And User select the drop off service 'FedEx'
+    And User click on Return Order button
+    Then a cancelation message should be displayed that 'Return was successful'
+
+  #6 Passed
+  Scenario: Verify User can write a review on order placed
     And User click on Orders section
     And User click on first order in list
-    And User click on Return Items button
-    And User select the Return Reason ‘Item damaged’
-    And User select the drop off service ‘FedEx’
-    And User click on Return Order button
-    Then a cancelation message should be displayed ‘Return was successful’
+    And User click on Review button
+    And User write Review headline 'Test' and 'This is for test'
+    And User click Add your Review button
+    Then a review message should be displayed 'Your review was added successfully'

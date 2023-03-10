@@ -20,9 +20,21 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	
 //	Scenario 1: passed
+
+	@When("User clears already existing items in cart section")
+	public void userClearsAlreadyExistingItemsInCartSection() {
+		
+		click(factory.homePage().cartIcon);
+		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
+	    for(WebElement cartItemsToDelete : cartItems) {
+	    	while(cartItemsToDelete.equals(true)) {
+	    		click(cartItemsToDelete);
+	    		
+	    	}
+	    }
+	}
 	
-	
-	@When("User change the category to {string}")
+	@And("User change the category to {string}")
 	public void userChangeTheCategoryTo(String categoryValue) {
 	    click(factory.homePage().allDepartmentsDropDown);
 	    List<WebElement> categoryList = factory.homePage().categorySelection;
@@ -36,32 +48,34 @@ public class RetailOrderSteps extends CommonUtility {
 	    logger.info("User changed the category to: " + categoryValue);
 	}
 	
-	@When("User search for an item {string}")
+	@And("User search for an item {string}")
 	public void userSearchForAnItem(String productValue) {
 	    click(factory.homePage().searchBar);
 	    sendText(factory.homePage().searchBar, productValue);
 	    logger.info("User searched for the item: " + productValue);
 	}
 	
-	@When("User click on Search icon")
+	@And("User click on Search icon")
 	public void userClickOnSearchIcon() {
 	    click(factory.homePage().searchButton);
 	    logger.info("User clicked on search button");
 	}
 	
-	@When("User click on item")
+	@And("User click on item")
 	public void userClickOnItem() {
-	    click(factory.orderPage().productOrderValue);
+	    click(factory.orderPage().product1Value);
 	    logger.info("User clicked on item");
 	}
 	
-	@When("User select quantity {string}")
+	@And("User select quantity {string}")
 	public void userSelectQuantity(String quantity) {
 	    selectByValue(factory.orderPage().productQuantityValue, quantity);
+	    logger.info("User selected quantity " + quantity);
 	}
 	
-	@When("User click add to Cart button")
+	@And("User click add to Cart button")
 	public void userClickAddToCartButton() {
+	    
 	    click(factory.homePage().AddCartBtnProduct);
 	    logger.info("User clicked add to Cart button");
 	}
@@ -171,11 +185,10 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	@When("User click on first order in list")
 	public void userClickOnFirstOrderInList() {
-		boolean temp = false;
+		
 		WebElement alreadyCanceled = factory.orderPage().orderCancelationText;
 	    List<WebElement> orderlist = factory.orderPage().showDetailList;
 	    for(WebElement order : orderlist) {
-	    	
 	    		click(order);
 	    }
 	    
@@ -202,11 +215,74 @@ public class RetailOrderSteps extends CommonUtility {
 	public void aCancelationMessageShouldBeDisplayed(String cancelText) {
 		waitTillPresence(factory.orderPage().orderCancelationText);
 	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderCancelationText));
-	    logger.info("User Cancelation message:" + cancelText);
+	    logger.info(cancelText);
 	    
 	}
 	
 	
 	
+//	Scenario 5: Passed
+	
+	@When("User click on Return Items button")
+	public void userClickOnReturnItemsButton() {
+	    click(factory.orderPage().orderReturnBtn);
+	    logger.info("User Clicked on Return button");
+	}
+	
+	@And("User select the Return Reason {string}")
+	public void userSelectTheReturnReason(String reason) {
+	    selectByVisibleText(factory.orderPage().orderReturnReason, reason);
+	    logger.info("User selected the return reson");
+	}
+	
+	@And("User select the drop off service {string}")
+	public void userSelectTheDropOffService(String dropOffService) {
+	    selectByVisibleText(factory.orderPage().orderDropOff, dropOffService);
+	    logger.info("User selected the drop off service");
+	}
+	
+	@And("User click on Return Order button")
+	public void userClickOnReturnOrderButton() {
+	    click(factory.orderPage().orderReturnOrderBtn);
+	    logger.info("User clicked on return order button");
+	}
+
+	@Then("a cancelation message should be displayed that {string}")
+	public void aCancelationMessageShouldBeDisplayedThat(String returnMessage) {
+	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderReturnSuccessfulMsg));
+	    logger.info(returnMessage);
+	}
+	
+	
+//	Scenario 6: 
+	
+	
+	@When("User click on Review button")
+	public void userClickOnReviewButton() {
+	    click(factory.orderPage().orderReviewBtn);
+	    logger.info("User clicked on Review Button");
+	}
+	
+	@And("User write Review headline {string} and {string}")
+	public void userWriteReviewHeadlineAnd(String headline, String description) {
+	    click(factory.orderPage().orderReviewHeadlineField);
+	    sendText(factory.orderPage().orderReviewHeadlineField, headline);
+	    click(factory.orderPage().orderReviewDescriptoinField);
+	    sendText(factory.orderPage().orderReviewDescriptoinField, description);
+	    logger.info("user wrote a review on order");
+	}
+	
+	@And("User click Add your Review button")
+	public void userClickAddYourReviewButton() {
+	    click(factory.orderPage().orderAddReviewBtn);
+	    logger.info("User clicked on add your review button");
+	}
+	
+	@Then("a review message should be displayed {string}")
+	public void aReviewMessageShouldBeDisplayed(String reviewMessage) {
+		waitTillPresence(factory.orderPage().orderReviewAddedMsg);
+	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderReviewAddedMsg));
+	    logger.info(reviewMessage);
+	}
 
 }

@@ -19,7 +19,7 @@ public class RetailOrderPage extends BaseSetup {
 	
 	
 	@FindBy(xpath="//p[contains(text(),'Kasa Outdoor Smart Plug')]")
-	public WebElement productOrderValue;
+	public WebElement product1Value;
 	
 	@FindBy(xpath="//p[contains(text(),'Apex Legends - 1,000 Apex Coins')]")
 	public WebElement productValue2;
@@ -69,9 +69,17 @@ public class RetailOrderPage extends BaseSetup {
 	@FindBy(xpath = "//div[@class='order']")
 	public List <WebElement> orderList;
 	
-	
 	@FindBy(xpath= "(//p[contains(text(),'Show Details')])")
 	public List<WebElement> showDetailList;
+	
+	@FindBy(xpath ="(//div[@class='cart__item'])")
+	public List<WebElement> orderCartItems;
+	
+	@FindBy(xpath ="(//span[contains(text(),'Delete')])")
+	public List<WebElement> orderCartItemsDeleteBtn;
+	
+	@FindBy(id="checkAll")
+	public WebElement orderCheckAllBtn;
 	
 	@FindBy(xpath="//button[@id='cancelBtn']")
 	public WebElement orderCancelBtn;
@@ -88,6 +96,35 @@ public class RetailOrderPage extends BaseSetup {
 	@FindBy(xpath ="//p[contains(text(),'Cancelled')]")
 	public WebElement orderCancelationText;
 	
+	@FindBy(id="returnBtn")
+	public WebElement orderReturnBtn;
+	
+	@FindBy(id="reasonInput")
+	public WebElement orderReturnReason;
+	
+	@FindBy(id="dropOffInput")
+	public WebElement orderDropOff;
+	
+	@FindBy(css ="#orderSubmitBtn")
+	public WebElement orderReturnOrderBtn;
+	
+	@FindBy(xpath="//p[contains(text(),'Return was successfull')]")
+	public WebElement orderReturnSuccessfulMsg;
+	
+	@FindBy(css="#reviewBtn")
+	public WebElement orderReviewBtn;
+	
+	@FindBy(id="headlineInput")
+	public WebElement orderReviewHeadlineField;
+	
+	@FindBy(id="descriptionInput")
+	public WebElement orderReviewDescriptoinField;
+	
+	@FindBy(id="reviewSubmitBtn")
+	public WebElement orderAddReviewBtn;
+	
+	@FindBy(xpath="//div[contains(text(),'Your review was added successfully')]")
+	public WebElement orderReviewAddedMsg;
 	
 	
 	

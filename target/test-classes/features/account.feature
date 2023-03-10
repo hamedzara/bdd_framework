@@ -8,9 +8,10 @@ Feature: TEK Retail Account feature
     And User should be logged in into Account
 
   #1 Passed
+  @accountTest
   Scenario: Verify User can update Profile Information
     When User click on Account option
-    And User update Name 'John' and Phone '123-456-7890'
+    And User update Name 'John' and Phone '123-456-7891'
     And User click on Update button
     Then user profile information should be updated
 
@@ -60,7 +61,6 @@ Feature: TEK Retail Account feature
     Then a message should be displayed ‘Address Added Successfully’
 
   #7
-  @accountTest
   Scenario: Verify User can edit an Address added on account
     When User click on Account option
     And User click on edit address option
