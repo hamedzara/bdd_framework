@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class RetailOrderSteps extends CommonUtility {
 	 
@@ -20,28 +21,32 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	
 //	Scenario 1: passed
-
-	@And("User orders sections should already be clear")
-//	This Step is added by the tester for better automation purpose. it was not included in original Scenario
-//	I have added this step, so it can remove already existing items from the cart
-//	If we don't remove the items from cart, the assertion will return false
-//	The assertion between added quantity and cart display items should be same
-//	And if we don't this step, it will true false
+		
 	
-//	If you want to keep scenario to its original state
-//	for the scenario to pass
-//	make sure to remove all items from cart section before running the scenario
-	public void userOrdersSectionsShouldAlreadyBeClear() {
-	    
+	@When("User cart section is already empty")
+	public void userCartSectionIsAlreadyEmpty() {
+//		Activate this step to clean out the cart section
+//		
+		
 		click(factory.homePage().cartIcon);
 		
-		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
-	    for(WebElement cartItemsToDelete : cartItems) {
-	    	waitTillClickable(cartItemsToDelete);
-	    	click(cartItemsToDelete);
-	    }
-	}
 		
+		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
+		for (WebElement cartItemsToDelete : cartItems) {
+			waitTillClickable(cartItemsToDelete);
+			click(cartItemsToDelete);
+		}
+//			This Step is added for better automation purpose. it was not included in original Scenario
+//			I have added this step, so it can remove already existing items from the cart
+//			If we don't remove the items from cart, the assertion will return false
+//			The assertion between added quantity and cart display items should be same
+//			And if we don't this step, it will true false
+		
+//			If you want to keep scenario to its original state
+//			for the scenario to pass
+//			make sure to remove all items from cart section manually before running the scenario
+	    
+	}
 	
 	
 	@And("User change the category to {string}")
@@ -90,7 +95,7 @@ public class RetailOrderSteps extends CommonUtility {
 	    logger.info("User clicked add to Cart button");
 	}
 
-	@Then("the cart icon quantity should change to {string}")
+	@Then("The cart icon quantity should change to {string}")
 	public void theCartIconQuantityShouldChangeTo(String cartQuantity) {
 	    Assert.assertEquals(factory.homePage().cartQuantityIcon.getText(), cartQuantity);
 	    logger.info("User cart icon quantity changed to: " + cartQuantity);
@@ -103,65 +108,43 @@ public class RetailOrderSteps extends CommonUtility {
 //	Scenario 2: Passed
 	
 	
+	
 	@And("User click on Cart option")
 	public void userClickOnCartOption() {
-	    click(factory.homePage().cartIcon);
+		click(factory.homePage().cartIcon);
+		
 	    logger.info("User clicked on cart Icon");
 	}
 	
+	
+	
+
 	@And("User click on Proceed to Checkout button")
 	public void userClickOnProceedToCheckoutButton() {
-	    click(factory.homePage().checkoutButton);
+		click(factory.homePage().checkoutButton);
 	    logger.info("User clicked on checkout button");
 	}
 	
 	@And("User click Add a new address link for shipping address")
 	public void userClickAddANewAddressLinkForShippingAddress() {
-	    click(factory.homePage().addNewAddressLink);
+		click(factory.homePage().addNewAddressLink);
 	    logger.info("User clicked on add new address button");
-	}
-	
-	@Then("User fill new address form with below information")
-	public void userFillNewAddressFormWithBelowInformation(DataTable dataTable) {
-	    List<Map<String, String>> orderNewAddressInfo = dataTable.asMaps(String.class, String.class);
-	    sendText(factory.orderPage().orderAddressCountry, orderNewAddressInfo.get(0).get("country"));
-	    clearMethod(factory.orderPage().orderAddressFullName);
-	    sendText(factory.orderPage().orderAddressFullName, orderNewAddressInfo.get(0).get("fullName"));
-	    clearMethod(factory.orderPage().orderAddressPhoneNumber);
-	    sendText(factory.orderPage().orderAddressPhoneNumber, orderNewAddressInfo.get(0).get("phoneNumber"));
-	    clearMethod(factory.orderPage().orderAddressStreet);
-	    sendText(factory.orderPage().orderAddressStreet, orderNewAddressInfo.get(0).get("streetAddress"));
-	    clearMethod(factory.orderPage().orderAddressApt);
-	    sendText(factory.orderPage().orderAddressApt, orderNewAddressInfo.get(0).get("apt"));
-	    clearMethod(factory.orderPage().orderAddressCity);
-	    sendText(factory.orderPage().orderAddressCity, orderNewAddressInfo.get(0).get("city"));
-	    waitTillClickable(factory.orderPage().orderAddressState);
-	    click(factory.orderPage().orderAddressState);
-	    selectByValue(factory.orderPage().orderAddressState, orderNewAddressInfo.get(0).get("state"));
-	    clearMethod(factory.orderPage().orderAddressZipcode);
-	    sendText(factory.orderPage().orderAddressZipcode, orderNewAddressInfo.get(0).get("zipCode"));
-	    logger.info("User filled new address from information");
-	    
 	}
 	
 	@And("User click Add a credit card or Debit Card for Payment method")
 	public void userClickAddACreditCardOrDebitCardForPaymentMethod() {
-	    click(factory.orderPage().addPaymentLink);
+		waitTillClickable(factory.orderPage().addPaymentLink);
+		click(factory.orderPage().addPaymentLink);
 	    logger.info("User Clicked on add a payment mehtod");
 	}
 	
 	@And("User click on Place Your Order")
 	public void userClickOnPlaceYourOrder() {
-	    click(factory.orderPage().placeOrderBtn);
+		click(factory.orderPage().placeOrderBtn);
 	    logger.info("User clicked on place order button");
 	}
+
 	
-	@Then("a message should be displayed ‘Order Placed, Thanks’")
-	public void aMessageShouldBeDisplayedOrderPlacedThanks() {
-	    waitTillPresence(factory.orderPage().orderPlacedMsg);
-	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderPlacedMsg));
-	    logger.info("User order has been placed");
-	}
 	
 	
 	
@@ -262,7 +245,7 @@ public class RetailOrderSteps extends CommonUtility {
 	}
 	
 	
-//	Scenario 6: 
+//	Scenario 6: Passed
 	
 	
 	@When("User click on Review button")

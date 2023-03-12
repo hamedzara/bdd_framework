@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class RetailSignInSteps extends CommonUtility{
 	
@@ -64,29 +65,28 @@ public class RetailSignInSteps extends CommonUtility{
 	
 	
 	
+
 //	Scenario 2: Passed
-//	SignUp Scenario/Using Scenario outline(set of Data)
+	
+	
 	
 	@When("User click on Create new Account button")
 	public void userClickOnCreateNewAccountButton() {
-	    click(factory.signInPage().createAccountBtn);
-	    logger.info("User clicked on Create new account button");
+		click(factory.signInPage().createAccountBtn);
+		logger.info("User clicked on Create new account button");
 	}
 	
 	@When("User fill the signUp information with below data")
 	public void userFillTheSignUpInformationWithBelowData(DataTable dataTable) {
+		
 		List<Map<String, String>> signUpInformation = dataTable.asMaps(String.class, String.class);
-		sendText(factory.signInPage().signUpNameField, signUpInformation.get(0).get("name"));
-		sendText(factory.signInPage().signUpEmailField, signUpInformation.get(0).get("email"));
+		sendText(factory.signInPage().signUpNameField, DataGeneratorUtility.data(signUpInformation.get(0).get("name")));
+		sendText(factory.signInPage().signUpEmailField, DataGeneratorUtility.data(signUpInformation.get(0).get("email")));
 		sendText(factory.signInPage().signUpPassField, signUpInformation.get(0).get("password"));
 		sendText(factory.signInPage().signUpConfirmPassField, signUpInformation.get(0).get("confirmPassword"));
 		logger.info("User filled the signUp information");
 		
-		
 	}
-	
-	
-//	Scenario 3: Passed
 	
 	@When("User click on signUp button")
 	public void userClickOnSignUpButton() {

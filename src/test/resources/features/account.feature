@@ -8,10 +8,9 @@ Feature: TEK Retail Account feature
     And User should be logged in into Account
 
   #1 Passed
-  @accountTest
   Scenario: Verify User can update Profile Information
     When User click on Account option
-    And User update Name 'John' and Phone '123-456-7891'
+    And User update Name 'fullName' and Phone 'phoneNumber'
     And User click on Update button
     Then user profile information should be updated
 
@@ -29,8 +28,8 @@ Feature: TEK Retail Account feature
     When User click on Account option
     And User click on Add a payment method link
     And User fill Debit or credit card information
-      | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 0987654321111235 | Jack Smith |               6 |           2025 |          121 |
+      | cardNumber | nameOnCard | expirationMonth | expirationYear | securityCode |
+      | cardNumber | nameOnCard |               6 |           2025 | securityCode |
     And User click on Add your card button
     Then a message should be displayed ‘Payment Method added successfully’
 
@@ -39,8 +38,8 @@ Feature: TEK Retail Account feature
     When User click on Account option
     And User click on Edit option of card section
     And user edit information with below data
-      | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 1234567890001234 | John       |               5 |           2030 |          222 |
+      | cardNumber | nameOnCard | expirationMonth | expirationYear | securityCode |
+      | cardNumber | nameOnCard |               5 |           2030 | securityCode |
     And user click on Update Your Card button
     Then a message should be displayed ‘Payment Method updated Successfully’
 
@@ -55,18 +54,19 @@ Feature: TEK Retail Account feature
     When User click on Account option
     And User click on Add address option
     And user fill new address form with below information
-      | country       | fullName | phoneNumber | streetAddress | apt | city      | state      | zipCode |
-      | United States | John Doe |  0987654321 | 0111 Trenholm | A15 | FlagStaff | California |   12345 |
+      | country       | fullName | phoneNumber | streetAddress | apt | city | state      | zipCode |
+      | United States | fullName | phoneNumber | address       | A15 | city | California | zipcode |
     And User click Add Your Address button
     Then a message should be displayed ‘Address Added Successfully’
 
   #7
+  @accountTest
   Scenario: Verify User can edit an Address added on account
     When User click on Account option
     And User click on edit address option
-    And user fill the new address form with below information
-      | country | fullName | phoneNumber | streetAddress | apt | city   | state   | zipCode |
-      | Canada  | Jack     |  0987654321 | king st       |  15 | Quebec | Toronto |   12345 |
+    And user fill new address form with below information
+      | country       | fullName | phoneNumber | streetAddress | apt | city | state      | zipCode |
+      | United States | fullName | phoneNumber | address       |  15 | city | California | zipcode |
     And User click update Your Address button
     Then a message should be displayed ‘Address Updated Successfully’
 

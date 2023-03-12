@@ -1,6 +1,7 @@
 package tek.sdet.framework.utilities;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
@@ -41,6 +42,12 @@ public class CommonUtility extends BaseSetup {
 
 	public WebElement waitTillPresence(By by) {
 		return this.getWait().until(ExpectedConditions.visibilityOfElementLocated(by));
+	}
+	
+	
+	public WebElement waitTillWebELementListPresence(List<WebElement> listItems) {
+		return this.getWait().until(ExpectedConditions.visibilityOf((WebElement) listItems));
+		
 	}
 
 	public void click(WebElement element) {

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -11,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tek.sdet.framework.pages.POMFactory;
 import tek.sdet.framework.utilities.CommonUtility;
+import tek.sdet.framework.utilities.DataGeneratorUtility;
 
 public class RetailAccountSteps extends CommonUtility{
 
@@ -30,9 +32,13 @@ public class RetailAccountSteps extends CommonUtility{
 	@And("User update Name {string} and Phone {string}")
 	public void userUpdateNameAndPhone(String nameValue, String phoneValue) {
 		clearMethod(factory.accountPage().accountNameField);
-	    sendText(factory.accountPage().accountNameField, nameValue);
+	    sendText(factory.accountPage().accountNameField, DataGeneratorUtility.data(nameValue));
+	    											  // In here I am using Data faker to generate a name value for me
+	    											  // By providing the value 'fullName' in our scenario parameter
+	    											  // Which is a trigger for our data faker generator to catch and generate
+	    											  // You can check the code in DataGeneratorUtility class
 	    clearMethod(factory.accountPage().accountPhoneField);
-	    sendText(factory.accountPage().accountPhoneField, phoneValue);
+	    sendText(factory.accountPage().accountPhoneField, DataGeneratorUtility.data(phoneValue));
 	    logger.info("User updated name: " + nameValue + " / and updated phone: " + phoneValue);
 	    
 	    
@@ -57,7 +63,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 //	Scenario 2: Passed
 	
-	@When("User enter below information")
+	@And("User enter below information")
 	public void userEnterBelowInformation(DataTable dataTable) {
 	    List<Map<String, String>> passwordUpdateInformation = dataTable.asMaps(String.class, String.class);
 	    sendText(factory.accountPage().accountPreviousPassField, passwordUpdateInformation.get(0).get("previousPassword"));
@@ -67,7 +73,7 @@ public class RetailAccountSteps extends CommonUtility{
 		
 	}
 	
-	@When("User click on Change Password button")
+	@And("User click on Change Password button")
 	public void userClickOnChangePasswordButton() {
 		click(factory.accountPage().accountChangePassBtn);
 		logger.info("User clicked on tchange account button");
@@ -87,28 +93,32 @@ public class RetailAccountSteps extends CommonUtility{
 //	Scenario 3: Passed
 	
 	
-	@When("User click on Add a payment method link")
+	@And("User click on Add a payment method link")
 	public void userClickOnAddAPaymentMethodLink() {
 	    click(factory.accountPage().accountAddPaymentmethod);
 	    logger.info("User clicked on add payment method");
 	}
 	
-	@When("User fill Debit or credit card information")
+	@And("User fill Debit or credit card information")
 	public void userFillDebitOrCreditCardInformation(DataTable dataTable) {
 		List<Map<String, String>> addPaymentInfo = dataTable.asMaps(String.class, String.class);
 		clearMethod(factory.accountPage().accountCardNumberField);
-		sendText(factory.accountPage().accountCardNumberField, addPaymentInfo.get(0).get("cardNumber"));
+		sendText(factory.accountPage().accountCardNumberField, DataGeneratorUtility.data(addPaymentInfo.get(0).get("cardNumber")));
+		
 		clearMethod(factory.accountPage().accountNameOnCardField);
-		sendText(factory.accountPage().accountNameOnCardField, addPaymentInfo.get(0).get("nameOnCard"));
+		sendText(factory.accountPage().accountNameOnCardField, DataGeneratorUtility.data(addPaymentInfo.get(0).get("nameOnCard")));
+															// Whenever I use DataGeneratorUtility class, it means I am using data faker
+		
 		sendText(factory.accountPage().accountExpirationMonthField, addPaymentInfo.get(0).get("expirationMonth"));
 		sendText(factory.accountPage().accountExpirationYearField, addPaymentInfo.get(0).get("expirationYear"));
+		
 		clearMethod(factory.accountPage().accountSecurityCodeField);
-		sendText(factory.accountPage().accountSecurityCodeField, addPaymentInfo.get(0).get("securityCode"));
+		sendText(factory.accountPage().accountSecurityCodeField, DataGeneratorUtility.data(addPaymentInfo.get(0).get("securityCode")));
 		logger.info("User filled the account information");
 	}
 	
 	
-	@When("User click on Add your card button")
+	@And("User click on Add your card button")
 	public void userClickOnAddYourCardButton() {
 	    click(factory.accountPage().accountAddCardBtn);
 	    logger.info("User Clicked on add card button");
@@ -124,30 +134,36 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
+	
 //	Scenario 4: Passed
 	
-	@When("User click on Edit option of card section")
+	
+	@And("User click on Edit option of card section")
 	public void userClickOnEditOptionOfCardSection() {
-	    click(factory.accountPage().accountCardsAndAccountBtn);
+	    List<WebElement> paymentCardsList = factory.accountPage().accountCardsList;
+	    for(WebElement card : paymentCardsList) {
+	    	click(card);
+	    	break;
+	    }
 	    click(factory.accountPage().accountCardEditBtn);
 	    logger.info("User clicked chose the card and clicked on edit");
 	}
 	
-	@When("user edit information with below data")
+	@And("user edit information with below data")
 	public void userEditInformationWithBelowData(DataTable dataTable) {
-	    List<List<String>> updatingCardInformation = dataTable.asLists(String.class);
+	    List<Map<String, String>> updatingCardInformation = dataTable.asMaps(String.class, String.class);
 	    clearMethod(factory.accountPage().accountCardNumberField);
-	    sendText(factory.accountPage().accountCardNumberField, updatingCardInformation.get(1).get(0));
+	    sendText(factory.accountPage().accountCardNumberField, DataGeneratorUtility.data(updatingCardInformation.get(0).get("cardNumber")));
 	    clearMethod(factory.accountPage().accountNameOnCardField);
-	    sendText(factory.accountPage().accountNameOnCardField, updatingCardInformation.get(1).get(1));
-	    sendText(factory.accountPage().accountExpirationMonthField, updatingCardInformation.get(1).get(2));
-	    sendText(factory.accountPage().accountExpirationYearField, updatingCardInformation.get(1).get(3));
+	    sendText(factory.accountPage().accountNameOnCardField, DataGeneratorUtility.data(updatingCardInformation.get(0).get("nameOnCard")));
+	    sendText(factory.accountPage().accountExpirationMonthField, updatingCardInformation.get(0).get("expirationMonth"));
+	    sendText(factory.accountPage().accountExpirationYearField, updatingCardInformation.get(0).get("expirationYear"));
 	    clearMethod(factory.accountPage().accountSecurityCodeField);
-	    sendText(factory.accountPage().accountSecurityCodeField, updatingCardInformation.get(1).get(4));
+	    sendText(factory.accountPage().accountSecurityCodeField, DataGeneratorUtility.data(updatingCardInformation.get(0).get("securityCode")));
 	    logger.info("User edited and updated the payment information");
 	}
 	
-	@When("user click on Update Your Card button")
+	@And("user click on Update Your Card button")
 	public void userClickOnUpdateYourCardButton() {
 	    click(factory.accountPage().accountUpdateCardBtn);
 	    logger.info("User clicked on update card button");
@@ -169,13 +185,25 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	@When("User click on remove option of card section")
 	public void userClickOnRemoveOptionOfCardSection() {
-		click(factory.accountPage().accountCardsAndAccountBtn);
-	    click(factory.accountPage().accountCardRemoveBtn);
+		
+		List<WebElement> cardsList = factory.accountPage().accountCardsList;
+		logger.info("This is users current card count: " + cardsList.size());
+			for(WebElement cards : cardsList) {
+				waitTillClickable(cards);
+				click(cards);
+			}
+			
+		click(factory.accountPage().accountCardRemoveBtn);
 	    logger.info("User clicked on remove card button");
 	}
 	
 	@Then("payment details should be removed")
 	public void paymentDetailsShouldBeRemoved() {
+		List<WebElement> accountCardList = factory.accountPage().accountCardsList;
+
+					
+		logger.info("This is Users card count after removal: " + accountCardList.size());
+			
 		
 		logger.info("User payment details is removed");
 	}
@@ -200,15 +228,15 @@ public class RetailAccountSteps extends CommonUtility{
 	    
 	    click(factory.accountPage().accountAddressFullName);
 	    clearMethod(factory.accountPage().accountAddressFullName);
-	    sendText(factory.accountPage().accountAddressFullName, newAddressTable.get(0).get("fullName"));
+	    sendText(factory.accountPage().accountAddressFullName, DataGeneratorUtility.data(newAddressTable.get(0).get("fullName")));
 
 	    click(factory.accountPage().accountAddressPhoneNumber);
 	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
-	    sendText(factory.accountPage().accountAddressPhoneNumber, newAddressTable.get(0).get("phoneNumber"));
+	    sendText(factory.accountPage().accountAddressPhoneNumber, DataGeneratorUtility.data(newAddressTable.get(0).get("phoneNumber")));
 
 	    click(factory.accountPage().accountStreetAddress);
 	    clearMethod(factory.accountPage().accountStreetAddress);
-	    sendText(factory.accountPage().accountStreetAddress, newAddressTable.get(0).get("streetAddress"));
+	    sendText(factory.accountPage().accountStreetAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("streetAddress")));
 
 	    click(factory.accountPage().accountAptAddress);
 	    clearMethod(factory.accountPage().accountAptAddress);
@@ -216,14 +244,14 @@ public class RetailAccountSteps extends CommonUtility{
 
 	    click(factory.accountPage().accountCityAddress);
 	    clearMethod(factory.accountPage().accountCityAddress);
-	    sendText(factory.accountPage().accountCityAddress, newAddressTable.get(0).get("city"));
+	    sendText(factory.accountPage().accountCityAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("city")));
 
 	    click(factory.accountPage().accountStateAddress);
 	    sendText(factory.accountPage().accountStateAddress, newAddressTable.get(0).get("state"));
 	    
 	    click(factory.accountPage().accountZipCodeAddress);
 	    clearMethod(factory.accountPage().accountZipCodeAddress);
-	    sendText(factory.accountPage().accountZipCodeAddress, newAddressTable.get(0).get("zipCode"));
+	    sendText(factory.accountPage().accountZipCodeAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("zipCode")));
 	    logger.info("User filled the address info");
 	    
 	}
@@ -249,45 +277,15 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	@When("User click on edit address option")
 	public void userClickOnEditAddressOption() {
-	    click(factory.accountPage().accountAddressEditBtn);
+		List<WebElement> adressList = factory.accountPage().accountAddressList;
+		for(WebElement address : adressList) {
+			click(factory.accountPage().accountAddressEditBtn);
+			break;
+		}
 	    logger.info("User clicked on address edit button");
 	}
 	
 	
-	@When("user fill the new address form with below information")
-	public void userFillTheNewAddressFormWithBelowInformation(DataTable dataTable) {
-	    List<Map<String, String>> newAddressTable = dataTable.asMaps(String.class, String.class);
-	    click(factory.accountPage().accountAddressCountry);
-	    selectByValue(factory.accountPage().accountAddressCountry, newAddressTable.get(0).get("country"));
-	    
-	    click(factory.accountPage().accountAddressFullName);
-	    clearMethod(factory.accountPage().accountAddressFullName);
-	    sendText(factory.accountPage().accountAddressFullName, newAddressTable.get(0).get("fullName"));
-
-	    click(factory.accountPage().accountAddressPhoneNumber);
-	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
-	    sendText(factory.accountPage().accountAddressPhoneNumber, newAddressTable.get(0).get("phoneNumber"));
-
-	    click(factory.accountPage().accountStreetAddress);
-	    clearMethod(factory.accountPage().accountStreetAddress);
-	    sendText(factory.accountPage().accountStreetAddress, newAddressTable.get(0).get("streetAddress"));
-
-	    click(factory.accountPage().accountAptAddress);
-	    clearMethod(factory.accountPage().accountAptAddress);
-	    sendText(factory.accountPage().accountAptAddress, newAddressTable.get(0).get("apt"));
-
-	    click(factory.accountPage().accountCityAddress);
-	    clearMethod(factory.accountPage().accountCityAddress);
-	    sendText(factory.accountPage().accountCityAddress, newAddressTable.get(0).get("city"));
-
-	    click(factory.accountPage().accountStateAddress);
-	    sendText(factory.accountPage().accountStateAddress, newAddressTable.get(0).get("state"));
-	    
-	    click(factory.accountPage().accountZipCodeAddress);
-	    clearMethod(factory.accountPage().accountZipCodeAddress);
-	    sendText(factory.accountPage().accountZipCodeAddress, newAddressTable.get(0).get("zipCode"));
-	    logger.info("User filled the address info");
-	}
 	
 	
 	@When("User click update Your Address button")
@@ -310,7 +308,12 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	@When("User click on remove option of Address section")
 	public void userClickOnRemoveOptionOfAddressSection() {
-	    click(factory.accountPage().accountAddressRemoveBtn);
+		List<WebElement> adressList = factory.accountPage().accountAddressList;
+		for(WebElement address : adressList) {			
+			click(factory.accountPage().accountAddressRemoveBtn);
+			break;
+		}
+		
 	    logger.info("User clicked on address remove button");
 	}
 	

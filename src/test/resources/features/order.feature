@@ -8,38 +8,38 @@ Feature: Tek Retail Order feature
     And User should be logged in into Account
 
   #1 Passed
-  @orderTest
   Scenario: Verify User can add an item to cart
-  	And User orders sections should already be clear
+  	And User cart section is already empty
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
     And User click on item
     And User select quantity '2'
     And User click add to Cart button
-    Then the cart icon quantity should change to '2'
+    Then The cart icon quantity should change to '2'
 
   #2 Passed
+  @orderTest
   Scenario: Verify User can place an order without Shipping address and payment Method on file
-    And User orders sections should already be clear
+  	And User cart section is already empty
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
     And User click on item
     And User select quantity '2'
     And User click add to Cart button
-    Then the cart icon quantity should change to '2'
+    Then The cart icon quantity should change to '2'
     And User click on Cart option
     And User click on Proceed to Checkout button
     And User click Add a new address link for shipping address
-    And User fill new address form with below information
-      | country | fullName | phoneNumber | streetAddress | apt | city    | state    | zipCode |
-      | France  | John     |  1234567890 | Governor St   | 111 | Phoenix | Bretagne |   12345 |
+    And user fill new address form with below information
+      | country       | fullName | phoneNumber | streetAddress | apt | city | state      | zipCode |
+      | United States | fullName | phoneNumber | streetAddress | 111 | city | California | zipcode |
     And User click Add Your Address button
     And User click Add a credit card or Debit Card for Payment method
     And User fill Debit or credit card information
-      | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 0009876543210002 | John       |               6 |           2032 |          222 |
+      | cardNumber | nameOnCard | expirationMonth | expirationYear | securityCode |
+      | cardNumber | fullName   |               6 |           2032 | securityCode |
     And User click on Add your card button
     And User click on Place Your Order
     Then a message should be displayed 'Order Placed, Thanks'
@@ -52,7 +52,7 @@ Feature: Tek Retail Order feature
     And User click on the item
     And User select quantity '5'
     And User click add to Cart button
-    Then the cart icon quantity should change to '5'
+    Then The cart icon quantity should change to '5'
     And User click on Cart option
     And User click on Proceed to Checkout button
     And User click on Place Your Order
@@ -69,6 +69,8 @@ Feature: Tek Retail Order feature
 
   #5 Passed
   Scenario: Verify User can Return the order
+    And User click on Orders section
+    And User click on first order in list
     And User click on Return Items button
     And User select the Return Reason 'Item damaged'
     And User select the drop off service 'FedEx'
