@@ -75,7 +75,7 @@ public class RetailOrderPage extends BaseSetup {
 	@FindBy(xpath ="(//div[@class='cart__item'])")
 	public List<WebElement> orderCartItems;
 	
-	@FindBy(xpath ="(//span[contains(text(),'Delete')])")
+	@FindBy(xpath ="//span[contains(text(),'Delete')]")
 	public List<WebElement> orderCartItemsDeleteBtn;
 	
 	@FindBy(id="checkAll")

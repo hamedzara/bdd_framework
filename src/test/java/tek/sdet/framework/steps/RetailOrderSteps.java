@@ -28,6 +28,7 @@ public class RetailOrderSteps extends CommonUtility {
 		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
 	    for(WebElement cartItemsToDelete : cartItems) {
 	    	while(cartItemsToDelete.equals(true)) {
+	    		waitTillClickable(cartItemsToDelete);
 	    		click(cartItemsToDelete);
 	    		
 	    	}

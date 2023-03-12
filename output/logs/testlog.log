@@ -1986,3 +1986,39 @@
 2023-03-09 16:09:44,818 - logger_File -INFO - User clicked on item
 2023-03-09 16:09:45,368 - logger_File -INFO - User selected quantity 2
 2023-03-09 16:09:45,567 - logger_File -INFO - User clicked add to Cart button
+2023-03-10 19:06:20,092 - logger_File -INFO - User is on retail website
+2023-03-10 19:06:20,097 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-10 19:06:20,646 - logger_File -INFO - User clicked on signin button
+2023-03-10 19:06:26,841 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-10 19:06:26,945 - logger_File -INFO - User clicked on login button
+2023-03-10 19:06:27,931 - logger_File -INFO - User is logged into account
+2023-03-10 19:06:29,450 - logger_File -INFO - User changed the category to: Smart Home
+2023-03-10 19:06:30,131 - logger_File -INFO - User searched for the item: kasa outdoor smart plug
+2023-03-10 19:06:30,295 - logger_File -INFO - User clicked on search button
+2023-03-10 19:06:30,627 - logger_File -INFO - User clicked on item
+2023-03-10 19:06:31,173 - logger_File -INFO - User selected quantity 2
+2023-03-10 19:06:31,295 - logger_File -INFO - User clicked add to Cart button
+2023-03-10 19:08:13,111 - logger_File -INFO - User is on retail website
+2023-03-10 19:08:13,117 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-10 19:08:13,636 - logger_File -INFO - User clicked on signin button
+2023-03-10 19:08:18,668 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-10 19:08:20,995 - logger_File -INFO - User clicked on login button
+2023-03-10 19:08:21,596 - logger_File -INFO - User is logged into account
+2023-03-10 19:08:23,249 - logger_File -INFO - User changed the category to: Smart Home
+2023-03-10 19:08:23,983 - logger_File -INFO - User searched for the item: kasa outdoor smart plug
+2023-03-10 19:08:24,134 - logger_File -INFO - User clicked on search button
+2023-03-10 19:08:24,500 - logger_File -INFO - User clicked on item
+2023-03-10 19:08:25,089 - logger_File -INFO - User selected quantity 2
+2023-03-10 19:08:25,259 - logger_File -INFO - User clicked add to Cart button
+2023-03-10 22:07:12,159 - logger_File -INFO - User is on retail website
+2023-03-10 22:07:12,164 - logger_File -INFO - Actual Title: React App = Expected Title: React App
+2023-03-10 22:07:12,719 - logger_File -INFO - User clicked on signin button
+2023-03-10 22:07:18,624 - logger_File -INFO - This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
+2023-03-10 22:07:18,756 - logger_File -INFO - User clicked on login button
+2023-03-10 22:07:19,466 - logger_File -INFO - User is logged into account
+2023-03-10 22:07:21,144 - logger_File -INFO - User changed the category to: Smart Home
+2023-03-10 22:07:21,621 - logger_File -INFO - User searched for the item: kasa outdoor smart plug
+2023-03-10 22:07:21,893 - logger_File -INFO - User clicked on search button
+2023-03-10 22:07:22,235 - logger_File -INFO - User clicked on item
+2023-03-10 22:07:22,803 - logger_File -INFO - User selected quantity 2
+2023-03-10 22:07:22,926 - logger_File -INFO - User clicked add to Cart button
