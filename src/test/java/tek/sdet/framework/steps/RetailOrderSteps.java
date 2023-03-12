@@ -21,19 +21,28 @@ public class RetailOrderSteps extends CommonUtility {
 	
 //	Scenario 1: passed
 
-	@When("User clears already existing items in cart section")
-	public void userClearsAlreadyExistingItemsInCartSection() {
-		
+	@And("User orders sections should already be clear")
+//	This Step is added by the tester for better automation purpose. it was not included in original Scenario
+//	I have added this step, so it can remove already existing items from the cart
+//	If we don't remove the items from cart, the assertion will return false
+//	The assertion between added quantity and cart display items should be same
+//	And if we don't this step, it will true false
+	
+//	If you want to keep scenario to its original state
+//	for the scenario to pass
+//	make sure to remove all items from cart section before running the scenario
+	public void userOrdersSectionsShouldAlreadyBeClear() {
+	    
 		click(factory.homePage().cartIcon);
+		
 		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
 	    for(WebElement cartItemsToDelete : cartItems) {
-	    	while(cartItemsToDelete.equals(true)) {
-	    		waitTillClickable(cartItemsToDelete);
-	    		click(cartItemsToDelete);
-	    		
-	    	}
+	    	waitTillClickable(cartItemsToDelete);
+	    	click(cartItemsToDelete);
 	    }
 	}
+		
+	
 	
 	@And("User change the category to {string}")
 	public void userChangeTheCategoryTo(String categoryValue) {
@@ -186,8 +195,6 @@ public class RetailOrderSteps extends CommonUtility {
 	
 	@When("User click on first order in list")
 	public void userClickOnFirstOrderInList() {
-		
-		WebElement alreadyCanceled = factory.orderPage().orderCancelationText;
 	    List<WebElement> orderlist = factory.orderPage().showDetailList;
 	    for(WebElement order : orderlist) {
 	    		click(order);

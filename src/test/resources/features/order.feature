@@ -10,7 +10,7 @@ Feature: Tek Retail Order feature
   #1 Passed
   @orderTest
   Scenario: Verify User can add an item to cart
-  	And User clears already existing items in cart section
+  	And User orders sections should already be clear
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
@@ -21,6 +21,7 @@ Feature: Tek Retail Order feature
 
   #2 Passed
   Scenario: Verify User can place an order without Shipping address and payment Method on file
+    And User orders sections should already be clear
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
