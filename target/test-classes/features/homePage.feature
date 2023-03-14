@@ -1,5 +1,5 @@
 @capstoneTest
-Feature: This feature is used for testing UI of Retail page
+Feature: Retail Application HomePage feature
 
   Background: 
     Given User is on retail website
