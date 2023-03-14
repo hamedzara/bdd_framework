@@ -1,4 +1,4 @@
-  @capstoneTest
+@capstoneTest
 Feature: TEK Retail application SignIn feature
 
   #1 Passed
@@ -9,7 +9,6 @@ Feature: TEK Retail application SignIn feature
     And User click on login button
     Then User should be logged in into Account
 
-  
   Scenario Outline: Verify user can sign in into Retail Application
     Given User is on retail website
     When User click on Sign in option

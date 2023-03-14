@@ -1,4 +1,4 @@
-  @capstoneTest
+@capstoneTest
 Feature: TEK Retail Account feature
 
   Background: 

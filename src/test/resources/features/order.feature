@@ -20,7 +20,7 @@ Feature: Tek Retail Order feature
 
   #2 Passed
   Scenario: Verify User can place an order without Shipping address and payment Method on file
-  	And User cart section is already empty
+    And User cart section is already empty
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
