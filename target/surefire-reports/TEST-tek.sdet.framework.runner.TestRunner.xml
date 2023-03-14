@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tek.sdet.framework.runner.TestRunner" time="20.535" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tek.sdet.framework.runner.TestRunner" time="8.259" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.15.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire/surefirebooter-20230311222227988_3.jar /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire 2023-03-11T22-22-27_444-jvmRun1 surefire-20230311222227988_1tmp surefire_0-20230311222227988_2tmp"/>
+    <property name="sun.java.command" value="/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire/surefirebooter-20230313152755649_3.jar /Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire 2023-03-13T15-27-55_031-jvmRun1 surefire-20230313152755649_1tmp surefire_0-20230313152755649_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/test-classes:/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/classes:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-java/7.8.0/cucumber-java-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-core/7.8.0/cucumber-core-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-gherkin/7.8.0/cucumber-gherkin-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.8.0/cucumber-gherkin-messages-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/gherkin/24.0.0/gherkin-24.0.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/messages/19.1.2/messages-19.1.2.jar:/Users/hamedzara/.m2/repository/io/cucumber/tag-expressions/4.1.0/tag-expressions-4.1.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-expressions/16.0.0/cucumber-expressions-16.0.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/datatable/7.8.0/datatable-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-plugin/7.8.0/cucumber-plugin-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/docstring/7.8.0/docstring-7.8.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/html-formatter/20.1.0/html-formatter-20.1.0.jar:/Users/hamedzara/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/hamedzara/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hamedzara/.m2/repository/io/cucumber/cucumber-junit/7.8.0/cucumber-junit-7.8.0.jar:/Users/hamedzara/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/hamedzara/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-java/4.4.0/selenium-java-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-api/4.4.0/selenium-api-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.4.0/selenium-chrome-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/hamedzara/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/hamedzara/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/hamedzara/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/hamedzara/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/hamedzara/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/hamedzara/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/hamedzara/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/hamedzara/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/hamedzara/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.4.0/selenium-chromium-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-json/4.4.0/selenium-json-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v102/4.4.0/selenium-devtools-v102-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v103/4.4.0/selenium-devtools-v103-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v104/4.4.0/selenium-devtools-v104-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.4.0/selenium-devtools-v85-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.4.0/selenium-edge-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.4.0/selenium-firefox-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.4.0/selenium-ie-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.4.0/selenium-opera-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.4.0/selenium-remote-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/hamedzara/.m2/repository/io/netty/netty-buffer/4.1.78.Final/netty-buffer-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-codec-http/4.1.78.Final/netty-codec-http-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-codec/4.1.78.Final/netty-codec-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-handler/4.1.78.Final/netty-handler-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-common/4.1.78.Final/netty-common-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.78.Final/netty-transport-classes-epoll-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.78.Final/netty-transport-classes-kqueue-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-native-epoll/4.1.78.Final/netty-transport-native-epoll-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.78.Final/netty-transport-native-kqueue-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.78.Final/netty-transport-native-unix-common-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport/4.1.78.Final/netty-transport-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-resolver/4.1.78.Final/netty-resolver-4.1.78.Final.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-api/1.16.0/opentelemetry-api-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-context/1.16.0/opentelemetry-context-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.16.0/opentelemetry-exporter-logging-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.16.0/opentelemetry-sdk-metrics-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.16.0-alpha/opentelemetry-sdk-logs-1.16.0-alpha.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.16.0/opentelemetry-sdk-common-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.16.0/opentelemetry-sdk-extension-autoconfigure-spi-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.16.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.16.0-alpha.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.16.0/opentelemetry-sdk-trace-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.16.0/opentelemetry-sdk-1.16.0.jar:/Users/hamedzara/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.16.0-alpha/opentelemetry-semconv-1.16.0-alpha.jar:/Users/hamedzara/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/Users/hamedzara/.m2/repository/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.jar:/Users/hamedzara/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/hamedzara/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/hamedzara/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/hamedzara/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/hamedzara/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/hamedzara/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/hamedzara/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/hamedzara/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-http/4.4.0/selenium-http-4.4.0.jar:/Users/hamedzara/.m2/repository/dev/failsafe/failsafe/3.2.4/failsafe-3.2.4.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.4.0/selenium-safari-driver-4.4.0.jar:/Users/hamedzara/.m2/repository/org/seleniumhq/selenium/selenium-support/4.4.0/selenium-support-4.4.0.jar:/Users/hamedzara/.m2/repository/io/github/bonigarcia/webdrivermanager/5.3.0/webdrivermanager-5.3.0.jar:/Users/hamedzara/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/hamedzara/.m2/repository/com/google/code/gson/gson/2.9.1/gson-2.9.1.jar:/Users/hamedzara/.m2/repository/com/github/docker-java/docker-java/3.2.13/docker-java-3.2.13.jar:/Users/hamedzara/.m2/repository/com/github/docker-java/docker-java-core/3.2.13/docker-java-core-3.2.13.jar:/Users/hamedzara/.m2/repository/com/github/docker-java/docker-java-api/3.2.13/docker-java-api-3.2.13.jar:/Users/hamedzara/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/hamedzara/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/hamedzara/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/hamedzara/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar:/Users/hamedzara/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.jar:/Users/hamedzara/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/hamedzara/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.2.13/docker-java-transport-httpclient5-3.2.13.jar:/Users/hamedzara/.m2/repository/com/github/docker-java/docker-java-transport/3.2.13/docker-java-transport-3.2.13.jar:/Users/hamedzara/.m2/repository/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar:/Users/hamedzara/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/hamedzara/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/hamedzara/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.1.3/httpclient5-5.1.3.jar:/Users/hamedzara/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.1.3/httpcore5-5.1.3.jar:/Users/hamedzara/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.1.3/httpcore5-h2-5.1.3.jar:/Users/hamedzara/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/Users/hamedzara/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/hamedzara/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/hamedzara/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/hamedzara/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/Users/hamedzara/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/Users/hamedzara/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/Users/hamedzara/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/Users/hamedzara/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/Users/hamedzara/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/hamedzara/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/Users/hamedzara/.m2/repository/mysql/mysql-connector-java/8.0.30/mysql-connector-java-8.0.30.jar:/Users/hamedzara/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar:/Users/hamedzara/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/hamedzara/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/hamedzara/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/hamedzara/.m2/repository/net/datafaker/datafaker/1.8.0/datafaker-1.8.0.jar:/Users/hamedzara/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/hamedzara/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire/surefirebooter-20230311222227988_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/hamedzara/eclipse-workspace/tek-transformers-bdd-framework/target/surefire/surefirebooter-20230313152755649_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="11.0.15.1+2-LTS-10"/>
@@ -62,48 +62,113 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="Verify User can remove Debit or Credit card" classname="TEK Retail Account feature" time="19.537">
+  <testcase name="Verify User can edit an Address added on account" classname="TEK Retail Account feature" time="7.238">
+    <error message="Unable to establish websocket connection to http://localhost:62552/devtools/browser/9d95f53b-707b-4a90-87fd-f1d5f30bf0b5&#10;Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;&#10;System info: host: &apos;Hameds-MacBook-Air.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;11.0.15.1&apos;&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.remote.http.ConnectionFailedException"><![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: 
+Unable to establish websocket connection to http://localhost:62552/devtools/browser/9d95f53b-707b-4a90-87fd-f1d5f30bf0b5
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'Hameds-MacBook-Air.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.15.1'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:106)
+	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+	at tek.sdet.framework.config.ChromeBrowser.openBrowser(ChromeBrowser.java:12)
+	at tek.sdet.framework.base.BaseSetup.setupBrowser(BaseSetup.java:53)
+	at tek.sdet.framework.base.BaseUITest.setupTests(BaseUITest.java:11)
+]]></error>
     <system-out><![CDATA[
 @accountTest
-Scenario: Verify User can remove Debit or Credit card                     # features/account.feature:48
+Scenario: Verify User can edit an Address added on account                # features/account.feature:64
 {browser=chrome, headless=false, url=https://tek-retail-ui.azurewebsites.net/}
- INFO [main] (RetailHomeSteps.java:31)- User is on retail website
- INFO [main] (RetailHomeSteps.java:32)- Actual Title: React App = Expected Title: React App
+      org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62552/devtools/browser/9d95f53b-707b-4a90-87fd-f1d5f30bf0b5
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'Hameds-MacBook-Air.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.2.1', java.version: '11.0.15.1'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:106)
+	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+	at tek.sdet.framework.config.ChromeBrowser.openBrowser(ChromeBrowser.java:12)
+	at tek.sdet.framework.base.BaseSetup.setupBrowser(BaseSetup.java:53)
+	at tek.sdet.framework.base.BaseUITest.setupTests(BaseUITest.java:11)
+
   Given User is on retail website                                         # tek.sdet.framework.steps.RetailHomeSteps.userIsOnRetailWebsite()
- INFO [main] (RetailSignInSteps.java:35)- User clicked on signin button
   When User click on Sign in option                                       # tek.sdet.framework.steps.RetailSignInSteps.userClickOnSignInOption()
- INFO [main] (RetailSignInSteps.java:44)- This is the email user entered: tester1010@tekschool.us , This is the password user enterd: Tek@12345
   And User enter email 'tester1010@tekschool.us' and password 'Tek@12345' # tek.sdet.framework.steps.RetailSignInSteps.userEnterEmailAndPassword(java.lang.String,java.lang.String)
- INFO [main] (RetailSignInSteps.java:52)- User clicked on login button
   And User click on login button                                          # tek.sdet.framework.steps.RetailSignInSteps.userClickOnLoginButton()
- INFO [main] (RetailSignInSteps.java:60)- User is logged into account
   And User should be logged in into Account                               # tek.sdet.framework.steps.RetailSignInSteps.userShouldBeLoggedInIntoAccount()
- INFO [main] (RetailAccountSteps.java:29)- User Clicked on account button
   When User click on Account option                                       # tek.sdet.framework.steps.RetailAccountSteps.userClickOnAccountOption()
- INFO [main] (RetailAccountSteps.java:190)- This is users current card count: 5
- INFO [main] (RetailAccountSteps.java:197)- User clicked on remove card button
-  And User click on remove option of card section                         # tek.sdet.framework.steps.RetailAccountSteps.userClickOnRemoveOptionOfCardSection()
- INFO [main] (RetailAccountSteps.java:205)- This is Users card count after removal: 5
- INFO [main] (RetailAccountSteps.java:208)- User payment details is removed
-  Then payment details should be removed                                  # tek.sdet.framework.steps.RetailAccountSteps.paymentDetailsShouldBeRemoved()
+  And User click on edit address option                                   # tek.sdet.framework.steps.RetailAccountSteps.userClickOnEditAddressOption()
+  And user fill new address form with below information                   # tek.sdet.framework.steps.RetailAccountSteps.userFillNewAddressFormWithBelowInformation(io.cucumber.datatable.DataTable)
+    | country       | fullName | phoneNumber | streetAddress | apt | city | state      | zipCode |
+    | United States | fullName | phoneNumber | address       | 15  | city | California | zipcode |
+  And User click update Your Address button                               # tek.sdet.framework.steps.RetailAccountSteps.userClickUpdateYourAddressButton()
+  Then a message should be displayed ‘Address Updated Successfully’       # tek.sdet.framework.steps.RetailAccountSteps.aMessageShouldBeDisplayedAddressUpdatedSuccessfully()
+      java.lang.NullPointerException
+	at tek.sdet.framework.utilities.CommonUtility.takeScreenShotAsBytes(CommonUtility.java:71)
+	at tek.sdet.framework.base.BaseUITest.closeTests(BaseUITest.java:17)
+
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
-Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 56188
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 63509
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1678602156.288][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-Mar 11, 2023 10:22:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1678746483.921][WARNING]: This version of ChromeDriver has not been tested with Chrome version 111.
+[1678746483.960][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Mar 13, 2023 3:28:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Mar 11, 2023 10:22:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: a no-op implementation
-Mar 11, 2023 10:22:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Unable to find CDP implementation matching 110.
-Mar 11, 2023 10:22:36 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
-WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Mar 13, 2023 3:28:04 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Invalid Status code=403 text=Forbidden
+java.io.IOException: Invalid Status code=403 text=Forbidden
+	at org.asynchttpclient.netty.handler.WebSocketHandler.abort(WebSocketHandler.java:92)
+	at org.asynchttpclient.netty.handler.WebSocketHandler.handleRead(WebSocketHandler.java:118)
+	at org.asynchttpclient.netty.handler.AsyncHttpClientHandler.channelRead(AsyncHttpClientHandler.java:78)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:314)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
 ]]></system-err>
+  </testcase>
+  <testcase name="Verify User can edit an Address added on account" classname="TEK Retail Account feature" time="7.244">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+	at tek.sdet.framework.utilities.CommonUtility.takeScreenShotAsBytes(CommonUtility.java:71)
+	at tek.sdet.framework.base.BaseUITest.closeTests(BaseUITest.java:17)
+]]></error>
   </testcase>
 </testsuite>

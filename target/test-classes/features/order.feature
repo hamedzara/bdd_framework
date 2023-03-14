@@ -1,3 +1,4 @@
+@orderTest
 Feature: Tek Retail Order feature
 
   Background: 
@@ -19,7 +20,6 @@ Feature: Tek Retail Order feature
     Then The cart icon quantity should change to '2'
 
   #2 Passed
-  @orderTest
   Scenario: Verify User can place an order without Shipping address and payment Method on file
   	And User cart section is already empty
     And User change the category to 'Smart Home'
@@ -46,6 +46,7 @@ Feature: Tek Retail Order feature
 
   #3 Passed
   Scenario: Verify User can place an order with Shipping address and payment Method on file
+  	And User cart section is already empty
     And User change the category to 'Electronics'
     And User search for an item 'Apex Legends'
     And User click on Search icon

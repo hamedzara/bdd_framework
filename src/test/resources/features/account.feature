@@ -59,7 +59,7 @@ Feature: TEK Retail Account feature
     And User click Add Your Address button
     Then a message should be displayed ‘Address Added Successfully’
 
-  #7
+  #7 Passed
   @accountTest
   Scenario: Verify User can edit an Address added on account
     When User click on Account option

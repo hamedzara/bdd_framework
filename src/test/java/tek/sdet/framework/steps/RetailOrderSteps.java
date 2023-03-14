@@ -27,15 +27,6 @@ public class RetailOrderSteps extends CommonUtility {
 	public void userCartSectionIsAlreadyEmpty() {
 //		Activate this step to clean out the cart section
 //		
-		
-		click(factory.homePage().cartIcon);
-		
-		
-		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
-		for (WebElement cartItemsToDelete : cartItems) {
-			waitTillClickable(cartItemsToDelete);
-			click(cartItemsToDelete);
-		}
 //			This Step is added for better automation purpose. it was not included in original Scenario
 //			I have added this step, so it can remove already existing items from the cart
 //			If we don't remove the items from cart, the assertion will return false
@@ -45,6 +36,26 @@ public class RetailOrderSteps extends CommonUtility {
 //			If you want to keep scenario to its original state
 //			for the scenario to pass
 //			make sure to remove all items from cart section manually before running the scenario
+		
+		click(factory.homePage().cartIcon);
+		
+		
+		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
+		boolean a = true;
+		if(factory.orderPage().orderCartListEmptyMsg.isDisplayed() == a) {
+			for (WebElement cartItemsToDelete : cartItems) {
+				waitTillClickable(cartItemsToDelete);
+				click(cartItemsToDelete);
+		
+			}
+			logger.info("Cart section is emptied");
+		} else {
+			logger.info("Cart is already empty");
+		}
+		
+			
+		
+		
 	    
 	}
 	
@@ -120,7 +131,8 @@ public class RetailOrderSteps extends CommonUtility {
 	
 
 	@And("User click on Proceed to Checkout button")
-	public void userClickOnProceedToCheckoutButton() {
+	public void userClickOnProceedToCheckoutButton() throws InterruptedException {
+		Thread.sleep(3000);
 		click(factory.homePage().checkoutButton);
 	    logger.info("User clicked on checkout button");
 	}

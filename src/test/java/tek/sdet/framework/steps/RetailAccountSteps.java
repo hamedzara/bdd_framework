@@ -221,28 +221,30 @@ public class RetailAccountSteps extends CommonUtility{
 	}
 	
 	@And("user fill new address form with below information")
-	public void userFillNewAddressFormWithBelowInformation(DataTable dataTable) {
+	public void userFillNewAddressFormWithBelowInformation(DataTable dataTable) throws InterruptedException {
 	    List<Map<String, String>> newAddressTable = dataTable.asMaps(String.class, String.class);
 	    click(factory.accountPage().accountAddressCountry);
 	    selectByValue(factory.accountPage().accountAddressCountry, newAddressTable.get(0).get("country"));
 	    
 	    click(factory.accountPage().accountAddressFullName);
-	    clearMethod(factory.accountPage().accountAddressFullName);
+//		Thread.sleep(3000);	    clearMethod(factory.accountPage().accountAddressFullName);
 	    sendText(factory.accountPage().accountAddressFullName, DataGeneratorUtility.data(newAddressTable.get(0).get("fullName")));
 
 	    click(factory.accountPage().accountAddressPhoneNumber);
-	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
+//		Thread.sleep(3000);	    clearMethod(factory.accountPage().accountAddressPhoneNumber);
 	    sendText(factory.accountPage().accountAddressPhoneNumber, DataGeneratorUtility.data(newAddressTable.get(0).get("phoneNumber")));
 
 	    click(factory.accountPage().accountStreetAddress);
+//	    Thread.sleep(3000);
 	    clearMethod(factory.accountPage().accountStreetAddress);
 	    sendText(factory.accountPage().accountStreetAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("streetAddress")));
 
 	    click(factory.accountPage().accountAptAddress);
-	    clearMethod(factory.accountPage().accountAptAddress);
+//		Thread.sleep(3000);	    clearMethod(factory.accountPage().accountAptAddress);
 	    sendText(factory.accountPage().accountAptAddress, newAddressTable.get(0).get("apt"));
 
 	    click(factory.accountPage().accountCityAddress);
+//		Thread.sleep(3000);	    
 	    clearMethod(factory.accountPage().accountCityAddress);
 	    sendText(factory.accountPage().accountCityAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("city")));
 
@@ -250,6 +252,7 @@ public class RetailAccountSteps extends CommonUtility{
 	    sendText(factory.accountPage().accountStateAddress, newAddressTable.get(0).get("state"));
 	    
 	    click(factory.accountPage().accountZipCodeAddress);
+//	    Thread.sleep(3000);
 	    clearMethod(factory.accountPage().accountZipCodeAddress);
 	    sendText(factory.accountPage().accountZipCodeAddress, DataGeneratorUtility.data(newAddressTable.get(0).get("zipCode")));
 	    logger.info("User filled the address info");
@@ -272,7 +275,7 @@ public class RetailAccountSteps extends CommonUtility{
 	
 	
 	
-//	Scenario 7: Failed (wont clear the field input)
+//	Scenario 7: Passed
 	
 	
 	@When("User click on edit address option")

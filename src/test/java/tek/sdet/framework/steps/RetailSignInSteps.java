@@ -70,13 +70,13 @@ public class RetailSignInSteps extends CommonUtility{
 	
 	
 	
-	@When("User click on Create new Account button")
+	@And("User click on Create new Account button")
 	public void userClickOnCreateNewAccountButton() {
 		click(factory.signInPage().createAccountBtn);
 		logger.info("User clicked on Create new account button");
 	}
 	
-	@When("User fill the signUp information with below data")
+	@And("User fill the signUp information with below data")
 	public void userFillTheSignUpInformationWithBelowData(DataTable dataTable) {
 		
 		List<Map<String, String>> signUpInformation = dataTable.asMaps(String.class, String.class);
@@ -88,7 +88,7 @@ public class RetailSignInSteps extends CommonUtility{
 		
 	}
 	
-	@When("User click on signUp button")
+	@And("User click on signUp button")
 	public void userClickOnSignUpButton() {
 		click(factory.signInPage().signUpFormBtn);
 		logger.info("User clicked on sign up button");

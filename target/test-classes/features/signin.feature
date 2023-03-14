@@ -1,3 +1,4 @@
+  @signinTest
 Feature: TEK Retail application SignIn feature
 
   #1 Passed
@@ -23,7 +24,6 @@ Feature: TEK Retail application SignIn feature
       | tester1010@tekschool.us     | Tek@12345 |
 
   #2 Passed
-  @signinTest
   Scenario: Verify user can create an account into Retail Website
     Given User is on retail website
     When User click on Sign in option
