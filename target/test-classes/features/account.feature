@@ -1,15 +1,14 @@
-@smoke
+  @smoke
 Feature: TEK Retail Account feature
 
-  Background: 
+  
+  #1 Passed
+  Scenario: Verify User can update Profile Information
     Given User is on retail website
     When User click on Sign in option
     And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
     And User click on login button
     And User should be logged in into Account
-
-  #1 Passed
-  Scenario: Verify User can update Profile Information
     When User click on Account option
     And User update Name 'fullName' and Phone 'phoneNumber'
     And User click on Update button
@@ -17,18 +16,25 @@ Feature: TEK Retail Account feature
 
   #2 Passed
   Scenario: Verify User can Update password
-  	And User enter the email 'tester10101@tekschool.us' and password 'Tek@12345'
-  	And User click on login button
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester10101@tekschool.us' and password 'tEk@12345'
+    And User click on login button
     And User should be logged in into Account
-    When User click on Account option
+    And User click on Account option
     And User enter below information
       | previousPassword | newPassword | confirmPassword |
-      | Tek@12345        | tEk@12345   | tEk@12345       |
+      | tEk@12345        | Tek@12345   | Tek@12345       |
     And User click on Change Password button
     Then a message should be displayed ‘Password Updated Successfully’
 
   #3 Passed
   Scenario: Verify User can add a payment method
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on Add a payment method link
     And User fill Debit or credit card information
@@ -39,6 +45,11 @@ Feature: TEK Retail Account feature
 
   #4 Passed
   Scenario: Verify User can edit Debit or Credit card
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on Edit option of card section
     And user edit information with below data
@@ -49,12 +60,22 @@ Feature: TEK Retail Account feature
 
   #5 Passed
   Scenario: Verify User can remove Debit or Credit card
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on remove option of card section
     Then payment details should be removed
 
   #6 Passed
   Scenario: Verify User can add an Address
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on Add address option
     And user fill new address form with below information
@@ -65,6 +86,11 @@ Feature: TEK Retail Account feature
 
   #7 Passed
   Scenario: Verify User can edit an Address added on account
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on edit address option
     And user fill new address form with below information
@@ -75,6 +101,11 @@ Feature: TEK Retail Account feature
 
   #8 Passed
   Scenario: Verify User can remove Address from Account
+    Given User is on retail website
+    When User click on Sign in option
+    And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
+    And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User click on remove option of Address section
     Then Address details should be removed

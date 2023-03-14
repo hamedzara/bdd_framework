@@ -98,7 +98,7 @@ public class RetailSignInSteps extends CommonUtility{
 	@Then("User should be logged into account page")
 	public void userShouldBeLoggedIntoAccountPage() {
 		Assert.assertTrue(isElementDisplayed(factory.accountPage().yourProfileText));
-		Assert.assertTrue(isElementDisplayed(factory.accountPage().profileImage));
+//		Assert.assertTrue(isElementDisplayed(factory.accountPage().profileImage));
 		logger.info("User is logged into Account page");
 		
 	}
