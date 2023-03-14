@@ -23,41 +23,6 @@ public class RetailOrderSteps extends CommonUtility {
 //	Scenario 1: passed
 		
 	
-	@When("User cart section is already empty")
-	public void userCartSectionIsAlreadyEmpty() {
-//		Activate this step to clean out the cart section
-//		
-//			This Step is added for better automation purpose. it was not included in original Scenario
-//			I have added this step, so it can remove already existing items from the cart
-//			If we don't remove the items from cart, the assertion will return false
-//			The assertion between added quantity and cart display items should be same
-//			And if we don't this step, it will true false
-		
-//			If you want to keep scenario to its original state
-//			for the scenario to pass
-//			make sure to remove all items from cart section manually before running the scenario
-		
-		click(factory.homePage().cartIcon);
-		
-		
-		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
-		boolean a = true;
-		if(factory.orderPage().orderCartListEmptyMsg.isDisplayed() == a) {
-			for (WebElement cartItemsToDelete : cartItems) {
-				waitTillClickable(cartItemsToDelete);
-				click(cartItemsToDelete);
-		
-			}
-			logger.info("Cart section is emptied");
-		} else {
-			logger.info("Cart is already empty");
-		}
-		
-			
-		
-		
-	    
-	}
 	
 	
 	@And("User change the category to {string}")
@@ -118,6 +83,32 @@ public class RetailOrderSteps extends CommonUtility {
 	
 //	Scenario 2: Passed
 	
+	@When("User cart section is already empty")
+	public void userCartSectionIsAlreadyEmpty() {
+//		Activate this step to clean out the cart section
+//		
+//			This Step is added for better automation purpose. it was not included in original Scenario
+//			I have added this step, so it can remove already existing items from the cart
+//			If we don't remove the items from cart, the assertion will return false
+//			The assertion between added quantity and cart display items should be same
+//			And if we don't this step, it will true false
+		
+//			If you want to keep scenario to its original state
+//			for the scenario to pass
+//			make sure to remove all items from cart section manually before running the scenario
+		
+		click(factory.homePage().cartIcon);
+		
+		
+		List<WebElement> cartItems = factory.orderPage().orderCartItemsDeleteBtn;
+		
+			for (WebElement cartItemsToDelete : cartItems) {
+				waitTillClickable(cartItemsToDelete);
+				click(cartItemsToDelete);
+		
+			}
+			logger.info("Cart section is emptied");
+	}
 	
 	
 	@And("User click on Cart option")

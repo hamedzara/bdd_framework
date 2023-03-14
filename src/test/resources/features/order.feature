@@ -10,7 +10,6 @@ Feature: Tek Retail Order feature
 
   #1 Passed
   Scenario: Verify User can add an item to cart
-  	And User cart section is already empty
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'
     And User click on Search icon
@@ -46,7 +45,6 @@ Feature: Tek Retail Order feature
 
   #3 Passed
   Scenario: Verify User can place an order with Shipping address and payment Method on file
-  	And User cart section is already empty
     And User change the category to 'Electronics'
     And User search for an item 'Apex Legends'
     And User click on Search icon
