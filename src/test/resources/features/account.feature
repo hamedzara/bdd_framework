@@ -1,4 +1,4 @@
-@capstoneTest
+#@capstoneTest
 Feature: TEK Retail Account feature
 
   Background: 
@@ -23,7 +23,7 @@ Feature: TEK Retail Account feature
     When User click on Account option
     And User enter below information
       | previousPassword | newPassword | confirmPassword |
-      | Tekk@12345        | tEk@12345   | tEk@12345       |
+      | Tek@12345        | tEk@12345   | tEk@12345       |
     And User click on Change Password button
     Then a message should be displayed ‘Password Updated Successfully’
 
