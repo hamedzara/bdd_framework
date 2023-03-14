@@ -1,7 +1,7 @@
-#@capstoneTest
 Feature: TEK Retail Account feature
 
   Background: 
+@capstoneTest
     Given User is on retail website
     When User click on Sign in option
     And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
@@ -17,10 +17,13 @@ Feature: TEK Retail Account feature
 
   #2 Passed
   Scenario: Verify User can Update password
+  	And User enter the email 'tester10101@tekschool.us' and password 'Tek@12345'
+  	And User click on login button
+    And User should be logged in into Account
     When User click on Account option
     And User enter below information
       | previousPassword | newPassword | confirmPassword |
-      | tEk@12345        | Tek@12345   | Tek@12345       |
+      | Tekk@12345        | tEk@12345   | tEk@12345       |
     And User click on Change Password button
     Then a message should be displayed ‘Password Updated Successfully’
 

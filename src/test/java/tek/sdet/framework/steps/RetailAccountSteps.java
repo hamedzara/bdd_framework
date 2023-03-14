@@ -63,6 +63,14 @@ public class RetailAccountSteps extends CommonUtility{
 	
 //	Scenario 2: Passed
 	
+	@When("User enter the email {string} and password {string}")
+	public void userEnterTheEmailAndPassword(String email, String password) {
+	    sendText(factory.signInPage().emailField, email);
+	    sendText(factory.signInPage().passwordField, password);
+	    logger.info("User provided email and password");
+	}
+
+	
 	@And("User enter below information")
 	public void userEnterBelowInformation(DataTable dataTable) {
 	    List<Map<String, String>> passwordUpdateInformation = dataTable.asMaps(String.class, String.class);
