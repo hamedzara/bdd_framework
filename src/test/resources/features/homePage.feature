@@ -1,4 +1,4 @@
-@capstoneTest
+#@homeTest
 Feature: Retail Application HomePage feature
 
   Background: 

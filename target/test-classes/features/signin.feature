@@ -1,4 +1,4 @@
-@capstoneTest
+#@signinTest
 Feature: TEK Retail application SignIn feature
 
   #1 Passed
