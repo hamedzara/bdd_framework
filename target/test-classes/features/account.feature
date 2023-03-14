@@ -1,4 +1,4 @@
-#@acountTest
+@smoke
 Feature: TEK Retail Account feature
 
   Background: 

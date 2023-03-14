@@ -1,4 +1,4 @@
-#@homeTest
+@smoke
 Feature: Retail Application HomePage feature
 
   Background: 
