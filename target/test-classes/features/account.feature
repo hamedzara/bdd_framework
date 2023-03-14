@@ -1,7 +1,7 @@
+@capstoneTest
 Feature: TEK Retail Account feature
 
   Background: 
-@capstoneTest
     Given User is on retail website
     When User click on Sign in option
     And User enter email 'tester1010@tekschool.us' and password 'tEk@12345'
