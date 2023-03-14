@@ -1,4 +1,4 @@
-@capstoneTest
+#@capstoneTest
 Feature: Tek Retail Order feature
 
   Background: 

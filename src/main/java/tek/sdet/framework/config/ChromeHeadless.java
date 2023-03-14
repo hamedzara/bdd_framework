@@ -10,13 +10,9 @@ public class ChromeHeadless implements Browser {
 	@Override
 	public WebDriver openBrowser(String url) {
 		WebDriverManager.chromedriver().setup();
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--headless");
-//		WebDriver driver = new ChromeDriver(options);
-		
-		ChromeOptions ops = new ChromeOptions();
-        ops.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(ops);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get(url);
 		return driver;
 	}
