@@ -1,3 +1,4 @@
+  @capstoneTest
 Feature: TEK Retail Account feature
 
   Background: 
@@ -60,7 +61,6 @@ Feature: TEK Retail Account feature
     Then a message should be displayed ‘Address Added Successfully’
 
   #7 Passed
-  @accountTest
   Scenario: Verify User can edit an Address added on account
     When User click on Account option
     And User click on edit address option

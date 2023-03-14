@@ -1,4 +1,4 @@
-@homeTest
+@capstoneTest
 Feature: This feature is used for testing UI of Retail page
 
   Background: 
