@@ -1,5 +1,5 @@
 @smoke
-Feature: Tek Retail Order feature
+Feature: TEK Retail Order feature
 
   Background: 
     Given User is on retail website

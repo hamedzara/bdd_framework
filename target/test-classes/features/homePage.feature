@@ -1,5 +1,5 @@
 @smoke
-Feature: Retail Application HomePage feature
+Feature: Tek Retail HomePage feature
 
   Background: 
     Given User is on retail website
@@ -15,7 +15,7 @@ Feature: Retail Application HomePage feature
     Then below options are present in Shop by Department sidebar
       | Electronics | Computers | Smart Home | Sports | Automative |
 
-  #passed
+  
   Scenario Outline: Verify department sidebar options
     When User click on All section
     And User on '<department>'

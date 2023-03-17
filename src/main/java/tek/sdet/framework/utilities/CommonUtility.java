@@ -97,6 +97,14 @@ public class CommonUtility extends BaseSetup {
 	public void clearMethod(WebElement clear) {
 		clear.clear();
 	}
+	
+	public void sendAndRemove(WebElement element) {
+		Actions action = new Actions(getDriver());
+		action.sendKeys(element, Keys.CONTROL + "a").perform();
+		;
+		action.sendKeys(element, Keys.BACK_SPACE).perform();
+		
+	}
 
 	public void selectByIndex(WebElement ele, int index) {
 		Select select = new Select(ele);
