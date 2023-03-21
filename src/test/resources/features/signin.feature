@@ -1,4 +1,4 @@
-@smoke
+@smoke1
 Feature: TEK Retail application SignIn feature
 
   #1 Passed
