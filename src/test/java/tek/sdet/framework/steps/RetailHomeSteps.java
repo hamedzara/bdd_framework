@@ -31,6 +31,9 @@ public class RetailHomeSteps extends CommonUtility {
 		logger.info("User is on retail website");
 		logger.info("Actual Title: " + actualTitle + " = Expected Title: " + expectedTitle);
 		
+		
+		
+		
 	}
 	
 	@When("User search for {string} product")

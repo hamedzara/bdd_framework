@@ -1,8 +1,9 @@
-  @smoke
+  
 Feature: TEK Retail Account feature
 
   
   #1 Passed
+  @smoke
   Scenario: Verify User can update Profile Information
     Given User is on retail website
     When User click on Sign in option
@@ -15,6 +16,7 @@ Feature: TEK Retail Account feature
     Then user profile information should be updated
 
   #2 Passed
+  @testing123
   Scenario: Verify User can Update password
     Given User is on retail website
     When User click on Sign in option

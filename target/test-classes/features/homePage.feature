@@ -1,10 +1,10 @@
-@smoke
 Feature: Tek Retail HomePage feature
 
   Background: 
     Given User is on retail website
 
   #1 Passed
+@smoke @regression
   Scenario: Verify user can search a product
     When User search for "pokemon" product
     Then The product should be displayed

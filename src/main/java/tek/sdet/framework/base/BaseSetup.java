@@ -38,6 +38,9 @@ public class BaseSetup {
 		return webDriver;
 	}
 
+	
+	
+	
 	public void setupBrowser() {
 		HashMap uiProperties = environmentVariables.getYamlProperty("ui");
 		System.out.println(uiProperties);

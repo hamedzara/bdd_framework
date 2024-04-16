@@ -1,4 +1,3 @@
-@smoke
 Feature: TEK Retail Order feature
 
   Background: 
@@ -9,6 +8,7 @@ Feature: TEK Retail Order feature
     And User should be logged in into Account
 
   #1 Passed
+@smoke
   Scenario: Verify User can add an item to cart
     And User change the category to 'Smart Home'
     And User search for an item 'kasa outdoor smart plug'

@@ -277,6 +277,7 @@ public class RetailOrderSteps extends CommonUtility {
 		waitTillPresence(factory.orderPage().orderReviewAddedMsg);
 	    Assert.assertTrue(isElementDisplayed(factory.orderPage().orderReviewAddedMsg));
 	    logger.info(reviewMessage);
+	    
 	}
 
 }
