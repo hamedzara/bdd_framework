@@ -10,7 +10,7 @@ import tek.sdet.framework.base.BaseSetup;
 
 public class RetailHomePage extends BaseSetup {
 	
-
+// This is just for test
 	public RetailHomePage() {
 		PageFactory.initElements(getDriver(), this);
 //		We are implementing page factory class to initialize the UI elements
@@ -66,6 +66,7 @@ public class RetailHomePage extends BaseSetup {
 	@FindBy(id="addAddressBtn")
 	public WebElement addNewAddressLink;
 	
-	
-	
+	// just for git practice
+	//@FindBy(id="addAddressBtn")
+	//public WebElement addNewAddressLink;
 }
